@@ -1,0 +1,66 @@
+<div class="FCCheckoutLogin">
+	<Login>
+</div>
+<div class="FCCheckoutMain">
+	<div id="idChkTopFC" class="FCChkOrderConfirmationFloat">
+		<OrderConfirmation>
+	</div>
+	<div id="idChkCol1FC" class="FCRegisterChk">
+		<Register>
+	</div>
+	<div id="idChkCol2FC" class="FCFreightChk">
+		<span id="idChkIniCol2FC"></span>
+		<div id="idChkTagsCol2FC">
+			<Freight>
+			<Payment>
+		</div>
+	</div>
+	<div id="idChkCol3FC" class="FCCartChk">
+		<Cart>
+	</div>
+	<div id="idChkBottomFC"></div>
+</div>
+<div class="PedidoFinalizado" id="PedidoFinalizado" style="position:relative;width:100%;margin:0 auto;display:none;">
+	<OrderCompletion>
+</div>
+<script type ='text/javascript' src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>
+<script>
+	var data_array = [
+		{ name: 'email', value: 'P2Email' },
+		{ name: 'identificador', value: 'FEZ_LOGIN' },
+		{ name: 'token_rdstation', value: '85c77c0789f2ef492a80a5045bc52182' },
+		{ name: 'nome', value: 'P2Nome' }
+	];  
+	function FuncChkRegisterEnd(){
+		if(F$.Step==0){
+			
+		}
+		if(F$.Step==1){
+		//RdIntegration.post(data_array, function () { console.log(data_array)});
+		// selecione automaticamente opção de frete retira loja
+			jQuery(function ($) {
+				var firstOptFreight = document.querySelector('#idTabFreteOptFC > tbody > tr > td > input[type=radio]');
+				if (firstOptFreight && typeof firstOptFreight != 'undefined') {
+					//console.log(firstOptFreight);
+					firstOptFreight.checked = true;
+					if (firstOptFreight.checked) {
+						firstOptFreight.click();
+					}
+				}
+			});
+			// FIM - selecione automaticamente opção de frete retira loja
+			
+			document.getElementById('P2Endereco').setAttribute('maxlength', '30');
+			document.getElementById('P2EnderecoNum').setAttribute('maxlength', '5');
+			document.getElementById('P2EnderecoCompl').setAttribute('maxlength', '30');
+			document.getElementById('P2Bairro').setAttribute('maxlength', '30');
+		}
+		if(F$.Step==2){
+			document.getElementById('PedidoFinalizado').style.display='block';
+			window.onscroll=null;
+			document.getElementById('idChkTagsCol2FC').style.position='relative';
+			document.getElementById('idChkExtCartFC').style.position='relative';
+		}
+		
+	}
+</script>
