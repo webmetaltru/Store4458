@@ -1,0 +1,291 @@
+ </div>
+</div>
+<!-- End Aside BarraEsquerda.htm - Open BarraTopo.htm - Don't remove -->
+
+<!-- NOVO PIXEL Facebook DSS Pixel Code -->
+<script>
+if (FC$.Page == "Cart") {
+  function FB_AddToCart_ProductID(){
+    var productGoogleParams = (typeof google_tag_params !== "undefined") ? google_tag_params : null;
+    if(productGoogleParams != null){
+      
+	 var idProduto = productGoogleParams.prodid;
+	 var itens = [];
+	 idProduto.forEach(function(item) {    
+		itens.push("" + item + "");
+	 });
+      
+	 fbq('track', 'AddToCart', {
+        content_type: 'product',
+        content_ids: itens
+      });
+	 
+    }
+  }
+  FCLib$.onReady(FB_AddToCart_ProductID);
+}
+</script>
+<!-- End Facebook Pixel Code -->
+
+<!-- START - BING ADS -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5526273"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5526273&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+<!-- END - BING ADS -->
+
+<!-- Begin: 3 banners - Payment, Locker and Delivery -->
+<div class="MainContainer InfoBanners">
+  <div class="row">
+    <!-- Begin: Banner Payment -->
+    <div class="col-small-6 col-medium-6 col-large-3 col-mlarge-3 col-xlarge-3 text-center FooterInfosContainer">
+      <a href="/Custom.asp?IDLoja=4458&arq=Informacoes.htm#FormasPagamento">
+        <img64 src="<BaseLoja>images/MeiosPagamento.svg" plain="true" width="100%" height="100" alt="Veja nossas formas de pagamento" title="Veja nossas formas de pagamento">
+      </a>
+    </div>
+    <!-- End: Banner Payment -->
+    <!-- Begin: Banner Locker -->
+    <div class="col-small-6 col-medium-6 col-large-3 col-mlarge-3 col-xlarge-3 text-center FooterInfosContainer">
+      <a href="/Custom.asp?IDLoja=4458&arq=Informacoes.htm#Seguranca">
+        <img64 src="<BaseLoja>images/LojaSegura.svg" plain="true" width="100%" height="100" alt="Veja nossos selos de Loja Segura" title="Veja nossos selos de Loja Segura">
+      </a>
+    </div>
+    <!-- End: Banner Locker -->
+    <!-- Begin: Banner Delivery -->
+    <div class="col-small-6 col-medium-6 col-large-3 col-mlarge-3 col-xlarge-3 text-center FooterInfosContainer">
+      <a href="/Custom.asp?IDLoja=4458&arq=Informacoes.htm#Entregas">
+        <img64 src="<BaseLoja>images/TiposDeFrete.svg" plain="true" width="100%" height="100" alt="Conhe?a nossos tipo de frete" title="Conhe?a nossos tipo de frete">
+      </a>
+    </div>
+    <!-- End: Banner Delivery -->
+    <!-- Begin: Contact -->
+    <div class="col-small-6 col-medium-6 col-large-3 col-xlarge-3 col-mlarge-3 text-center FooterInfosContainer">
+      <a href="/faleconosco.asp?idloja=<IDLojaNum>">
+        <img64 src="<BaseLoja>images/FaleConosco.svg" plain="true" width="100%" height="100" alt="Alguma d?vida? Fale conosco" title="Alguma d?vida? Fale conosco">
+      </a>
+    </div>
+    <!-- End: Contact -->
+  </div>
+</div>
+<!-- End 3 banners - Payment, Locker and Delivery -->
+
+<!-- Begin: Menu, Newsletter and Address -->
+<div class="FootterMainBarFC">
+  <div class="row">
+    <div class="MainContainer">
+      <!-- Begin Menu Produtos -->
+      <div class="col-small-12 col-medium-6 col-large-3 col-xlarge-3 text-left FooterSpaceContainerFC">
+        <span class="title-footer"><tag-FCFooterProductsTitle></span>
+        <ul class="FooterULMenuFC" id="FooterNav1">
+          <li class="FooterMenuSelectedNav1">
+            <a href="/">
+              <tag-FCFooterProductsMenu1>
+            </a>
+          </li>
+          <li>
+            <tag-FCFooterProductsMenu2>
+          </li>
+          <li>
+            <tag-FCFooterProductsMenu3>
+          </li>
+          <li>
+            <tag-FCFooterProductsMenu4>
+          </li>
+          <li>
+            <tag-FCFooterProductsMenu5>
+          </li>
+          <li>
+            <a href="/buscaavancada.asp?idloja=<IDLojaNum>">
+              <tag-FCFooterProductsMenu6>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Menu Produtos -->
+      <!-- Begin Menu Minha conta -->
+      <div class="col-small-12 col-medium-6 col-large-3 col-xlarge-3 text-left FooterSpaceContainerFC">
+        <span class="title-footer"><tag-FCFooterAccountTitle></span>
+        <ul class="FooterULMenuFC" id="FooterNav2">
+          <li class="FooterMenuSelectedNav2">
+            <a href="/addProduto.asp?idloja=<IDLojaNum>">
+              <tag-FCFooterAccountMenu1>
+            </a>
+          </li>
+          <li>
+            <a href="/account.asp?idloja=<IDLojaNum>&orders=1#Orders">
+              <tag-FCFooterAccountMenu2>
+            </a>
+          </li>
+          <li>
+            <a href="/account.asp?idloja=<IDLojaNum>&register=1#Register">
+              <tag-FCFooterAccountMenu3>
+            </a>
+          </li>
+          <li>
+            <a href="/cadastro.asp?idloja=<IDLojaNum>&pp=3" id="idLinkLoginFC">
+              <tag-FCFooterAccountMenu4>
+            </a>
+          </li>
+          <li>
+            <a href="/newsletter.asp?idloja=<IDLojaNum>">
+              <tag-FCFooterAccountMenu5>
+            </a>
+          </li>
+          <li>
+            <a href="/indique.asp?idloja=<IDLojaNum>">
+              <tag-FCFooterAccountMenu6>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Menu Minha conta -->
+      <!-- Begin Menu Informa??es -->
+      <div class="col-small-12 col-medium-6 col-large-3 col-xlarge-3 text-left FooterSpaceContainerFC">
+        <span class="title-footer"><tag-FCFooterInformationTitle></span>
+        <ul class="FooterULMenuFC" id="FooterNav3">
+          <li class="FooterMenuSelectedNav3">
+            <a href="/Custom.asp?IDLoja=4458&arq=Duvidas.htm">
+              Dúvidas Frequentes
+            </a>
+          </li>
+          <li>
+            <a href="/Custom.asp?IDLoja=4458&arq=Duvidas.htm">
+              Como Comprar
+            </a>
+          </li>
+          <li>
+            <a href="/Custom.asp?IDLoja=4458&arq=Informacoes.htm#Entregas">
+              Entrega
+            </a>
+          </li>
+		  <li>
+            <a href="/noticias.asp?IDLoja=4458&v=1">
+              Aramado.com na Mídia
+            </a>
+          </li>
+          <li>
+            <a href="/faleconosco.asp?idloja=<IDLojaNum>">
+              Fale Conosco
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Menu Informa??es -->
+      <!-- Begin Newsletter and Address -->
+      <div class="col-small-12 col-medium-6 col-large-3 col-xlarge-3 text-left FooterSpaceContainerFC">
+        <!-- Begin Newsletter -->
+        <div>
+          <span class="title-footer">Quero receber novidades</span>
+          <span style="white-space:nowrap;">
+            <form name="FormCadNewsletter" method="GET" action="/newsletter.asp" onsubmit="return ValidaCadNewsletter(this);">
+              <input type="hidden" name="IDLoja" value="<IDLojaNum>">
+              <input type="hidden" name="Y" value="<Y>">
+              <input type="hidden" name="FormatoHTML" value="True">
+              <input type="hidden" name="EnviarAssinante" value="Enviar">
+              <span class="FooterInputPosition"><input type="email" name="Email" class="FooterNewsletterInput" placeholder="Digite seu e-mail"></span>
+          <span class="FooterInputBtnPosition"><input type="image" src="<PathTo file="images/IconNewsletter.svg">" width="38" height="38" name="ok" value="Enviar"></span>
+          </form>
+          </span>
+        </div>
+        <!-- End Newsletter -->
+        <!-- Begin Address -->
+        <div class="FooterNewsletterBoxFC">
+          <span class="title-footer">Contato</span>
+          <ul class="FooterAddressFC FooterULMenuFC">
+            <tag-INFO-RODAPE-DADOSLOJA>
+            <li>
+              <tag-INFO-RODAPE-REDESSOCIAIS>
+            </li>
+          </ul>
+        </div>
+        <!-- End Address -->
+      </div>
+      <!-- End Newsletter and Address -->
+    </div>
+  </div>
+  <!-- Begin Payment and Security -->
+  <div class="row">
+    <div class="MainContainer">
+      <div class="col-small-12 col-medium-6 col-large-6 col-xlarge-6 text-left">
+        <span class="FooterTitleTxt"><tag-FCFooterIconPaymentTitle></span>
+        <ul class="FooterULPaymentFC">
+          <tag-INFO-RODAPE-PGTO-ICONS>
+        </ul>
+      </div>
+      <div class="col-small-12 col-medium-6 col-large-6 col-xlarge-6 text-left">
+        <span class="FooterTitleTxt">Segurança</span>
+        <ul class="FooterULSecurityFC info-segunranca">
+          <li>
+            <a href="https://www.siteadvisor.com/sites/www.aramado.com" target="_blank"><img src="https://www.aramado.com/lojas/00004458/images/mcafee_seguranca.png" style="opacity: 1;"></a>
+          </li>
+          <li>
+            <a href="https://www.google.com/safebrowsing/diagnostic?site=aramado.com" target="_blank"><img src="https://www.aramado.com/lojas/00004458/images/google_safe_browsing.png" style="opacity: 1;"></a>
+          </li>
+          <li>
+            <a href="/Custom.asp?IDLoja=4458&arq=Informacoes.htm#Seguranca"><img alt="Seu pedido com Seguran?a" title="Loja Virtual Segura" src="<PathTo file="images/SecBadgeSSL.svg">"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Payment and Security -->
+</div>
+<!-- End: Menu, Newsletter and Address -->
+
+<!-- Begin: Technology - Copyright -->
+<div class="FooterTecBoxFC">
+  <div class="MainContainer FooterTecHeightFC">
+    <div class="row">
+      <div class="col-small-12 col-medium-8 col-large-8 col-xlarge-8 text-left text-small-center info-adicional">
+        <p><tag-INFO-RODAPE-FRETEGRATIS></p>
+        <p>Para promo?s, produtos sujeitos a disponibilidade de estoque.</p>
+        <p>Parcelamento em at?0x sem juros para pedidos acima de R$1.000,00 com frete incluso.</p>
+        <p>Aviso: Todos os pre? e condi?s deste site s?v?dos apenas para compras no site. Se houver diferen? de pre?
+          prevalece o pre?no carrinho.</p>
+      </div>
+      <div class="col-small-12 col-medium-4 col-large-4 col-xlarge-4 text-right text-small-center">
+        <tag-FCFooterCopyright>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="ModalDetalheFreteGratis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close fechar-detalhe-produto-html" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Fechar</span></button>
+        <h4 class="modal-title" id="myModalLabel">Condi?s de Frete Gr?s para todo o Brasil</h4>
+      </div>
+      <div class="modal-body DetalheFreteGratis" id="DetalheFreteGratis">
+        <div class="img-frete-gratis">
+            <img src="<PathTo file="images/informacoes/frete_gratis_brasil.png">" alt="Frete Gr?s para todo o Brasil*" style="width:150px;float:right;" />
+        </div>
+        <tag-INFO-FRETEGRATIS>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay"></div>
+<!-- End: Menu, Newsletter and Address -->
+
+<!-- Includes CSS -->
+<link rel="stylesheet" href="/wave/V3/waveMin.css?cccfc=1">
+<script>FCLib$.loadAsyncCSS('<PathTo file="htm/css/jquery_ui.css">');</script>
+<!--[if IE]><style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style><![endif]-->
+
+<!-- Includes Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src='<PathTo file="htm/js/autosuggest.js">'></script>
+
+<script>  
+  $('.loop img').each(function(){
+  	var oImg = $(this).attr("data-src");
+  	if(oImg != null){
+  		$(this).attr("src", oImg);
+  	}
+  });
+fnFooter();
+</script>
+<!-- Progress Bar -->
+<link rel="stylesheet" href="<PathTo file="htm/css/nprogress.css">">
+<script src="<PathTo file="htm/js/nprogress.js">"></script>
+<script>fnProgressBarLoading();</script>
+
+
