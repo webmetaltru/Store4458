@@ -1,0 +1,45 @@
+<style>
+.left-bar{display: none;}
+</style>
+
+<script language=JavaScript src=<BaseLoja>htm/JurosParcelas.js></script>
+<script>
+    function MostraMaxParcela(PrecoProd,MaxParcelas){
+    var ComSem;
+    if(PrecoProd>=1000)MaxParcelas=10;
+    else if(PrecoProd>=100)MaxParcelas=9;
+    else if(PrecoProd>=30)MaxParcelas=6;
+    else if(PrecoProd>=1)MaxParcelas=1;
+    
+    if(PrecoProd==0||MaxParcelas==1||Juros.length==0)return;
+    if(MaxParcelas==0||MaxParcelas>Juros.length)MaxParcelas=Juros.length;
+    if(Juros[MaxParcelas-1]>0)ComSem=""; else ComSem=" sem juros";
+    document.write(MaxParcelas+"x de <b>"+FormatPrecoReais(CalculaParcelaJurosCompostos(PrecoProd,MaxParcelas))+"</b> "+ ComSem);
+    }
+</script>
+
+<div class="row" id="saldaoconteudo">
+<div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 no-p">
+<div id="saldaobanner_topo"><img src="<BaseLoja>images/banner_pag_kids.jpg" style="width:100%;"></div> 
+</div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_1"><prod out="p10" cod="12148"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_2"><prod out="p10" cod="601142"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_3"><prod out="p10" cod="601141"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_4"><prod out="p10" cod="1223"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_5"><prod out="p10" cod="6012223"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_6"><prod out="p10" cod="6012224"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_7"><prod out="p10" cod="6012225"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_8"><prod out="p10" cod="12143"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_9"><prod out="p10" cod="12146"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_10"><prod out="p10" cod="6012123"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_11"><prod out="p10" cod="12188"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_12"><prod out="p10" cod="12189"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_13"><prod out="p10" cod="12191"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_14"><prod out="p10" cod="12190"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_15"><prod out="p10" cod="12100"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_16"><prod out="p10" cod="COMBO2L"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_17"><prod out="p10" cod="12102"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_18"><prod out="p10" cod="COMBO4294"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_19"><prod out="p10" cod="4217"></div>
+<div class="col-small-6 col-medium-4 col-large-3 col-xlarge-3 produto_20"><prod out="p10" cod="4218"></div>
+</div>
