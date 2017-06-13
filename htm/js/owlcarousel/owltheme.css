@@ -1,0 +1,148 @@
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #333333;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	/*background: #ffffff;*/
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 0.5;
+}
+
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+.owl-theme .owl-controls .owl-pagination{
+	    margin-top: -40px;
+}
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 0.99;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #ffffff;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 0.99;
+	background: #F6BE1F;
+}
+
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url('/lojas/00029124/images/icons/AjaxLoader.gif') no-repeat center center;
+}
+.owlHome.owl-theme .owl-controls .owl-page span{
+	background: #cccccc;
+}
+.owlHome.owl-theme .owl-controls .owl-pagination{
+	    margin-top: 0px;
+}
+.owlHome.owl-theme .owl-controls .owl-page.active span,
+.owlHome.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 0.99;
+	background: #F6BE1F;
+}
+.owlBannerHome  .owl-buttons{display: none;}
+.owlHome .owl-buttons .owl-prev,
+.owlHome .owl-buttons .owl-next{
+    position: absolute;
+    margin: 0;
+	text-indent: -1;
+	width: 30px;
+	height:30px;
+	
+}
+.owlHome .owl-buttons {
+	position: relative;
+    margin: 0;
+    bottom: 220px;
+}
+.owlHome .owl-buttons .owl-prev{
+	left:-30px;
+	background: url('/icons/icopackagev1/svg/essential-light-01-chevron-left.svg')no-repeat;
+}
+
+.owlHome .owl-buttons .owl-next{
+	right:-30px;
+	background: url('/icons/icopackagev1/svg/essential-light-02-chevron-right.svg')no-repeat;
+}
+
+.owl-carousel.owlBannerHome .item{
+	margin: 0 auto;
+}
+
+@media only screen and (max-width:640px){
+	.owl-theme .owl-controls .owl-pagination{
+	    margin-top: 0px;
+	}
+	.owlBannerHome.owl-theme .owl-controls .owl-page span{
+		background: #cccccc;
+	}
+	.owlBannerHome.owl-theme .owl-controls .owl-page.active span,
+	.owlBannerHome.owl-theme .owl-controls.clickable .owl-page:hover span{
+		filter: Alpha(Opacity=100);/*IE7 fix*/
+		opacity: 0.99;
+		background: #F6BE1F;
+	}
+	.owlHome .owl-buttons {
+    	bottom: 40px;
+	}
+	.owlHome .owl-buttons .owl-prev{
+		left:0;
+	}
+	.owlHome .owl-buttons .owl-next{
+		right:0;
+	}
+}
