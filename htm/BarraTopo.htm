@@ -1,0 +1,348 @@
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Includes CSS -->
+<link rel="stylesheet" href="/wave/V3/waveMin.css?cccfc=1">
+<script>FCLib$.loadAsyncCSS('<PathTo file="htm/css/jquery_ui.css">');</script>
+
+<link rel="stylesheet" type="text/css" href="<BaseLoja>htm/css/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="<BaseLoja>htm/css/slick/slick-theme.css"/>
+
+<link rel="stylesheet" href='<PathTo file="htm/layout/custom.css">'>
+<link rel="stylesheet" href="<BaseLoja>htm/css/bootstrapmin.css">
+
+<!--[if IE]><style type="text/css">.ui-autocomplete-category{margin-top: -2px}</style><![endif]-->
+<!-- Includes Javascript -->
+<script src='<PathTo file="htm/JurosParcelas.js">'></script>
+<script type="text/javascript" src="/jquery-2.1.1.min.js"></script>
+<script src='<PathTo file="htm/js/bootstrapmin.js">'></script>
+<script src='<PathTo file="htm/LojaLib.js">'></script>
+<script type="text/javascript" src='<PathTo file="htm/js/slick/slickmin.js">'></script>
+
+<script src='<PathTo file="htm/add_scripts.js">'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src='<PathTo file="htm/js/autosuggestTbar.js">'></script>
+<script src='<PathTo file="htm/js/autosuggest.js">'></script>
+<script src='<PathTo file="htm/js/ScrollToTheTop.js">'></script>
+<script src='<PathTo file="htm/js/TinyNav.js">'></script>
+<script>iItensCesta=<QtdCesta>;</script>
+
+<script type="" text/javascript "">
+  IDLoja='<IDLoja>'; //obtém IDLoja para montar links
+  IDLojaNum='<IDLojaNum>';
+</script>
+
+<script language=JavaScript src=<BaseLoja>htm/SimulaFreteFC.js></script>
+
+<!-- Badge FRETE GRÁTIS -->
+<div id="badgeFreteGratis" class="actualElement ie10up">
+  <div class="badgeFreteGratis-fechar" data-active="true">
+  </div>
+  <img class="img-shipping" src='<PathTo file="images/icon_shipping.svg">'><br>
+  <div id="zFTotalFreeFreight">
+    Faltam <b> R$ 160,00</b><br>
+    para ganhar<br>
+    <a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><img src="<BASELOJA>images/frete-gratis.gif" border="0"></a>
+	p/ Sul e Sudeste.
+	<a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><b>*Veja sua região</b></a>
+  </div>
+</div>
+
+  <script>  
+  function showHide(dataAttr) {
+    var elemClick = document.querySelector('[' + dataAttr + ']');
+    var elemToShowHide = document.querySelector('#badgeFreteGratis');
+    var elemClickAttr = elemClick.getAttribute(dataAttr);
+
+    elemClick.addEventListener('click', function () {
+      if (elemClickAttr == "true") {
+        elemClickAttr = "false";
+        elemToShowHide.setAttribute('class', 'changeElement ie10upClosed');
+      }
+      else {
+        elemClickAttr = "true";
+        elemToShowHide.setAttribute('class', 'actualElement ie10up');
+      }
+
+    }, false)
+  }
+  showHide("data-active");  
+  </script>  
+
+<!-- FIM - Badge FRETE GRÁTIS -->
+
+
+<!-- Begin: Toolbar -->
+<div class="FCToolBar">
+  <div class="FCToolBarContainer">
+    <tag-FCHeaderToolBarLogo>
+      <tag-FCHeaderToolBarCategories>
+        <tag-FCHeaderToolBarSearch>
+          <span class="FCToolBarChatTel">
+      <a href="#" style="float:left;" class=""><img64 src="<BaseLoja>images/icons/telefone.svg" plain="true" width="20" height="20"></a>
+      <p><tag-FCHeaderToolBarPhone></p>
+    </span>
+          <tag-FCHeaderToolBarCart>
+  </div>
+</div>
+<script>var w=jQuery(window).width();w>1024&&ToolbarCartExec();</script>
+<!-- End: Toolbar -->
+
+<!-- Begin: Logo|Menu|Search|Cart -->
+<div class="MainContainer">
+  <div class="row FullSpaceFC">
+    <div class="col-small-12 col-medium-4 col-large-3 col-xlarge-3 logo-topo">
+      <tag-FCHeaderLogo>
+    </div>
+    <nav class="col-small-12 SmallMenuContainer">
+      <div class="SmallMenuButtom">
+        <tag-FCHeaderMenuMobileIcon>
+      </div>
+      <ul class="SmallMenuList HeaderMenuULFC">
+        <div class="row">
+          <div class="col-small-12 col-medium-12 col-large-12 no-p HeaderSocialLoginPosition LoginMobile">
+            <tag-FCHeaderSocialLogin>
+          </div>
+        </div>
+        <tag-FCHeaderMenuMobileOpcoes>
+          <li>
+            <ListPathCat out="10" id="1">
+          </li>
+      </ul>
+    </nav>
+    <div class="col-small-12 col-medium-6 col-large-7 col-xlarge-7 options-topo">
+      <div class="HeaderMenuOneFC hide-small">
+        <ul class="LoginDesk">
+            <!-- Begin Social Login User -->
+            <tag-FCHeaderSocialLogin>
+            <!-- End Social Login User -->
+          <li>
+            <tag-FCHeaderMenuAccount>
+          </li>
+          <li>
+            <tag-FCHeaderMenuTrack>
+          </li>
+          <li>
+            <tag-FCHeaderMenuContact>
+          </li>
+          <li>
+            <tag-FCHeaderMenuTelefone>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <!-- Begin Search -->
+        <div class="col-medium-12 col-large-12 no-p">
+          <form name="TopSearchForm" method="GET" id="autocomplete-form" action="/listaprodutos.asp">
+            <input type="hidden" name="idloja" value="<IDLojaNum>">
+            <input type="hidden" name="digitada" value="true">
+            <div class="HeaderSearchFC">
+              <div id="DivSearch">
+                <div class="col-small-10 col-medium-10 col-large-10 col-xlarge-10 no-p">
+                  <input type="text" id="autocomplete" value="<SearchText>" name="Texto" class="InputTextBusca" placeholder="Digite sua busca aqui">
+                </div>
+                <div class="col-small-2 col-medium-2 col-large-2 col-xlarge-2 no-p">
+                  <a href="#search" onclick="sF$.fnSearchSubmit(document.TopSearchForm);" class="btn1 btn-sent HeaderIconSearchButtonFC"><span class="HeaderSerachIMGIconFC"><img64 src="<BaseLoja>images/IconSearch.svg" plain="true" width="25" height="25" alt="Buscar" title="Buscar"></span></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- End Search -->
+        
+      </div>
+
+    </div>
+    
+    <!-- Begin Cart -->
+    <div class="col-small-12 col-medium-2 col-large-2 col-xlarge-2 text-right">
+      <div class="row">
+        <div class="col-small-12 col-medium-12 col-large-12">
+          <div class="HeaderCartMainFC">
+            <tag-FCHeaderCart>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Cart -->
+  </div>
+</div>
+<!-- End: Logo|Menu|Search|Cart -->
+
+<!-- Begin Main Menu -->
+<div class="HeaderMainMenuFC">
+  <div class="MainContainer">
+    <div class="row">
+      <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 no-p">
+        <div class="base-menu-topo">
+          <ul class="HeaderMenuULFC smallMenuHide menu-desktop">
+            <li class="HeaderMenuHomeMobileFC">
+              <a href="<StoreDomain>">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/IconHome.svg" plain="true" width="20" height="20"></span>
+              </a>
+            </li>
+            <li class="HeaderMenuSaleMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,78920,cozinha">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/cozinha.svg" plain="true" width="30" height="30" /></span>                Cozinha
+              </a>
+              <ul class="sub-menu-left">
+                <div class="col-lista">
+                  <tag-MENU-TOPO-COZINHA>
+                </div>
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,232844,space-savers"><img src="<BaseLoja>images/bnm_cozinha.jpg"></a>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuHomeDepFC">
+              <a href="/prod,idloja,4458,order,8,idcategoria,200659,combos-shelftrack">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/armario.svg" plain="true" width="30" height="30"></span>                Armários e Closets
+              </a>
+              <ul class="sub-menu-left">
+                <div class="col-lista">
+                   <tag-MENU-TOPO-ARMARIOFACIL>
+                </div>
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,200659,combos-shelftrack"><img src="<BaseLoja>images/bnm_armario_facil.jpg"></a>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuReleaseMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,78921,banheiro">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/banheiro.svg" plain="true" width="30" height="30"></span>                Banheiro
+              </a>
+              <ul class="sub-menu-left">
+                <div class="col-lista">
+                  <tag-MENU-TOPO-BANHEIRO>
+                </div>
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,114163,linha-geometrica"><img src="<BaseLoja>images/bnm_banheiro.jpg"></a>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuNewsMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,78926,garagem-e-jardim">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/garagem_jardim.svg" plain="true" width="30" height="30"></span>                Garagem e Jardim
+              </a>
+              <ul class="sub-menu-left">
+                <div class="col-lista">
+                  <tag-MENU-TOPO-GARAGEM-JARDIM>
+                </div>
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,224376,linha-jardim"><img src="<BaseLoja>images/bnm_garagem.jpg"></a>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuHelpMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,78927,lavanderia">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/lavanderia.svg" plain="true" width="30" height="30"></span>                Lavanderia
+              </a>
+              <ul class="sub-menu-left">
+                <div class="col-lista">
+                  <tag-MENU-TOPO-LAVANDERIA>
+                </div>
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,150437,varais">
+                    <img src="<BaseLoja>images/bnm_lavanderia.jpg"></a>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuHelpMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,78919,home-office">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/escritorio.svg" plain="true" width="30" height="30"></span>                Escritório
+              </a>
+              <ul class="sub-menu-left">
+                <div class="col-lista">
+                  <tag-MENU-TOPO-ESCRITORIO>
+                </div>
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,87356,organizadores">
+                    <img src="<BaseLoja>images/bnm_office.jpg"></a>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuHelpMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,78924,gavetas-aramadas">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/gavetas_gabinetes.svg" plain="true" width="30" height="30"></span>                Gavetas p/ Gabinetes
+              </a>
+              <ul class="sub-menu-left">
+                <div class="col-lista">
+                  <tag-MENU-TOPO-GAVETAS>
+                </div>
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,78924,gavetas-aramadas">
+                    <img src="<BaseLoja>images/bnm_gavetas.jpg"></a>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuHelpMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,78923,todos-ambientes">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/todos_ambientes.svg" plain="true" width="30" height="30"></span>                Todos Ambientes
+              </a>
+              <ul class="sub-menu-right">
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,78981,gavetex">
+                    <img src="<BaseLoja>images/bnm_estantes.jpg"></a>
+                </div>
+                <div class="col-lista">
+                  <tag-MENU-TOPO-TODOS-AMBIENTES>
+                </div>
+              </ul>
+            </li>
+            <li class="HeaderMenuHelpMobileFC">
+              <a href="/prod,IDLoja,4458,IDCategoria,79388,laminato">
+                <span class="HeaderMenuULIconFC"><img64 src="<BaseLoja>images/icons/laminato.svg" plain="true" width="30" height="30"></span>                Móveis de Madeira
+              </a>
+              <ul class="sub-menu-right">
+                <div class="col-imagem">
+                  <a href="/prod,IDLoja,4458,IDCategoria,212503,combos-laminato">
+                    <img src="<BaseLoja>images/bnm_laminato.jpg"></a>
+                </div>
+                <div class="col-lista">
+                  <tag-MENU-TOPO-LAMINATO>
+                </div>
+              </ul>
+            </li>
+			<li class="HeaderMenuHelpMobileFC menu-liquidacao">
+              <a href="/Custom.asp?IDLoja=4458&arq=promocao/liquidacao-mai2017&cupom=LIQUIDAJA70">
+                <h3>Liquidação</h3>
+				<h5>produtos com até</h5>
+				<h4>70%</h4>
+				<h5>de desconto</h5>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Menu -->
+
+<!-- START - BANNER HOME -->
+<div class="row base-banner-home">
+  <div class="col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12">
+    <div class="bnr-slick-slide">
+      <div class="item"><banner 1></div>
+      <div class="item"><banner 2></div>
+      <div class="item"><banner 3></div>
+    </div>
+  </div>
+</div>
+<div class="MainContainer">
+  <div class="row">
+    <div class="banner-frete col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12 no-p">
+      <a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis">
+        <banner 100>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- END - BANNER HOME -->
+
+<script>MobileMenuClick();</script>
+
+<!-- Begin Aside BarraEsquerda.htm - Close Rodape.htm - Don't remove -->
+<div class="MainContainer">
+  <div class="row">
