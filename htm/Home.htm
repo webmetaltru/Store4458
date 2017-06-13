@@ -1,0 +1,124 @@
+<script language=JavaScript src=<BaseLoja>htm/JurosParcelas.js></script>
+<script>
+function MostraMaxParcela(PrecoProd,MaxParcelas){
+var ComSem;
+if(PrecoProd>=1000)MaxParcelas=10;
+  else if(PrecoProd>=100)MaxParcelas=9;
+  else if(PrecoProd>=30)MaxParcelas=6;
+  else if(PrecoProd>=1)MaxParcelas=1;
+  
+if(PrecoProd==0||MaxParcelas==1||Juros.length==0)return;
+if(MaxParcelas==0||MaxParcelas>Juros.length)MaxParcelas=Juros.length;
+if(Juros[MaxParcelas-1]>0)ComSem=""; else ComSem=" sem juros";
+document.write(MaxParcelas+"x de <b>"+FormatPrecoReais(CalculaParcelaJurosCompostos(PrecoProd,MaxParcelas))+"</b> "+ ComSem);
+}
+</script>
+<style>
+  .banner-promocao-barratopo{display: none;}
+</style>
+
+<!-- Begin Home -->
+<div class="col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12 no-p">
+  <div class="banner-promocional m-b-20">
+      <banner 20><!-- PROMOÇÃO ABAIXO DO FULLBANNER -->
+  </div>
+  
+  <!-- START - PROMOCIONAIS 1 -->
+  <div class="row">
+	<div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p-l banner-promocional">
+		<banner 50><!-- BANNER PROMOCIONAL 1 -->
+	</div>
+	<div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p-r banner-promocional">
+		<banner 51><!-- BANNER PROMOCIONAL 2 -->
+	</div>
+	<div class="col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12 no-p banner-promocional">
+		<banner 24><!-- BANNER PROMOCIONAL ADICIONAL -->
+	</div>
+  </div>
+	<!-- END - PROMOCIONAIS 1 -->
+
+  <!-- START - COZINHA -->
+  <div class="row">
+    <div class="MainHomeBoxTitFC text-left">
+      <h2 class="titulo cozinha">Utilidades para sua Cozinha</h2>
+    </div>
+    <div class="col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12 no-p">
+      <div class="bnr-slick-prod">
+          <tag-HOME-PRODUTOS-1>
+      </div>
+    </div>
+  </div>
+  <!-- END - COZINHA -->
+  
+  <!-- START - PROMOCIONAIS 2 -->
+  <div class="row">
+	<div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p-l banner-promocional">
+		<banner 52><!-- BANNER PROMOCIONAL 3 -->
+	</div>
+	<div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p-r banner-promocional">
+		<banner 53><!-- BANNER PROMOCIONAL 4 -->
+	</div>
+  </div>
+  <!-- START - PROMOCIONAIS 2 -->
+
+  <!-- START - ARMÁRIOS -->
+  <div class="row">
+    <div class="MainHomeBoxTitFC text-left">
+      <h2 class="titulo armario">Monte seu Armário</h2>
+    </div>
+    <div class="col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12 no-p">
+      <div class="bnr-slick-prod">
+          <tag-HOME-PRODUTOS-2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p-l banner-promocional">
+		<banner 54><!-- BANNER PROMOCIONAL 5 -->
+	</div>
+	<div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p-r banner-promocional">
+		<banner 55><!-- BANNER PROMOCIONAL 6 -->
+	</div>
+  </div>
+  <!-- END - ARMÁRIOS -->
+  
+  <!-- START - NATAL -->
+  <div class="row m-b-20">
+    <div class="col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12 no-p banner-promocional">
+      <banner 58>
+    </div>
+  </div>
+  <!-- END - NATAL -->
+  
+  <!-- START - PROMOCIONAIS 3 -->
+  <div class="row mini-banner-promocionais">
+	<div class="col-small-6 col-medium-3 col-mlarge-3 col-xlarge-3 banner-promocional">
+		<div class="bnr-mini-promo-quadrado">
+			<tag-HOME-BANNER-MINI-PROMO-1>
+		</div>
+	</div>
+	<div class="col-small-6 col-medium-3 col-mlarge-3 col-xlarge-3 banner-promocional">
+		<div class="bnr-mini-promo-quadrado">
+			<tag-HOME-BANNER-MINI-PROMO-2>
+		</div>
+	</div>
+	<div class="col-small-6 col-medium-3 col-mlarge-3 col-xlarge-3 banner-promocional">
+		<div class="bnr-mini-promo-quadrado">
+			<tag-HOME-BANNER-MINI-PROMO-3>
+		</div>
+	</div>
+	<div class="col-small-6 col-medium-3 col-mlarge-3 col-xlarge-3 banner-promocional">
+		<div class="bnr-mini-promo-quadrado">
+			<tag-HOME-BANNER-MINI-PROMO-4>
+		</div>
+	</div>
+  </div>
+<!-- START - PROMOCIONAIS 3 -->
+
+  <div class="row">
+    <div class="col-small-12 col-medium-12 col-mlarge-12 col-xlarge-12 no-p apresentacao-aramado">
+       <tag-HOME-INFO-INSTITUCIONAL>
+    </div>
+  </div>
+</div>
+<!-- End Home -->
