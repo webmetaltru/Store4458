@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="617" height="100" viewBox="0 0 617 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b5007b;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #87025c;
+      }
+
+      .cls-3 {
+        font-size: 33.547px;
+        fill: #fff;
+        font-family: Arial;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <path id="Retângulo_1" data-name="Retângulo 1" class="cls-1" d="M-20,0H617V100H78Z"/>
+  <path id="Retângulo_1_copiar" data-name="Retângulo 1 copiar" class="cls-2" d="M80,100L2,22H80v78Z"/>
+  <text id="LANÇAMENTO" class="cls-3" transform="translate(103.164 72.702) scale(2.048)">LANÇAMENTO</text>
+</svg>
