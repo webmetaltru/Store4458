@@ -1,0 +1,93 @@
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="<BaseLoja>htm/css/bootstrapmin.css">
+<link rel="stylesheet" href='<PathTo file="htm/layout/custom.css">'>
+<link rel="stylesheet" href="<PathTo file="htm/checkout.css">">
+<style type="text/css">
+	.topo-mobile, .FootterMainBarFC, .InfoBanners{display: none;}
+	.pedido-logo .HeaderLogo, .EstTabPagto #idCheckoutFC .smSelect{margin: 0px !important}
+</style>
+<div>
+</div>
+<div class="container-fluid no-p">
+  <div class="row FullSpaceFC">
+    <div class="col-xs-4 pedido-logo">
+      <a href="https://www.aramado.com" class="logotipo"><img alt="<NomeLoja>" title="<NomeLoja>" src="<PathTo file="images/LogoTopo.png">" class="HeaderLogo"></a>
+    </div>
+    <div class="col-xs-8 pedido-info-top">
+      <img width="30" alt="Seu pedido com Segurança" title="Loja Virtual Segura" src="<PathTo file="images/secbadgessl.svg">" />
+      <span>Ambiente 100% Seguro</span>
+    </div>
+  </div>
+</div>
+
+<div class="FCCheckoutLogin">
+	<Login>
+</div>
+<div class="FCCheckoutMain">
+	<div id="idChkTopFC" class="FCChkOrderConfirmationFloat">
+		<OrderConfirmation>
+	</div>
+	<div id="idChkCol1FC" class="FCRegisterChk">
+		<Register>
+	</div>
+	<div id="idChkCol2FC" class="FCFreightChk">
+		<span id="idChkIniCol2FC"></span>
+		<div id="idChkTagsCol2FC">
+			<Freight>
+			<Payment>
+		</div>
+	</div>
+	<div id="idChkCol3FC" class="FCCartChk">
+		<Cart>
+	</div>
+	<div id="idChkBottomFC"></div>
+</div>
+<div class="PedidoFinalizado" id="PedidoFinalizado" style="position:relative;width:100%;margin:0 auto;display:none;">
+	<OrderCompletion>
+</div>
+
+<script>
+	function FuncChkRegisterEnd() {
+		if (F$.Step == 1) {
+
+			// selecione automaticamente opção de frete retira loja
+			// jQuery(function($){
+			//   var firstOptFreight = document.getElementById('IDCEPTipo565');
+			//   if (firstOptFreight && typeof firstOptFreight != 'undefined') {
+			//     firstOptFreight.checked = true;
+			//     if (firstOptFreight.checked) {
+			//       firstOptFreight.click();
+			//     }   
+			//   }
+			// });
+			// FIM - selecione automaticamente opção de frete retira loja
+
+			document.getElementById('P2Endereco').setAttribute('maxlength', '30');
+			document.getElementById('P2EnderecoNum').setAttribute('maxlength', '5');
+			document.getElementById('P2EnderecoCompl').setAttribute('maxlength', '30');
+			document.getElementById('P2Bairro').setAttribute('maxlength', '30');
+
+			// selecione automaticamente opção de frete retira loja
+			jQuery(function ($) {
+				var firstOptFreight = document.querySelector('#idTabFreteOptFC > tbody > tr > td > input[type=radio]');
+				if (firstOptFreight && typeof firstOptFreight != 'undefined') {
+					console.log(firstOptFreight);
+					firstOptFreight.checked = true;
+					if (firstOptFreight.checked) {
+						firstOptFreight.click();
+					}
+				}
+			});
+			// FIM - selecione automaticamente opção de frete retira loja
+		}
+
+		else if (F$.Step == 2) {
+			document.getElementById('PedidoFinalizado').style.display = 'block';
+			window.onscroll = null;
+			document.getElementById('idChkTagsCol2FC').style.position = 'relative';
+			document.getElementById('idChkExtCartFC').style.position = 'relative';
+		}
+
+	}
+
+</script>
