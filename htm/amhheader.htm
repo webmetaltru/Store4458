@@ -18,7 +18,11 @@ html{font-size: 16px;}
 body{font-family: "Helvetica Neue",Helvetica,Arial,Roboto,sans-serif;background-color:#f0eeec;}
 header{background-color: #e5e5e5;max-width: 600px; margin:0 auto; padding-bottom: 10px;}
 footer,section{max-width: 600px; margin:0 auto;background-color: #fff;}
-
+.banner-home-amp{position:relative;}
+.banner-home-amp.banner1{height:100px;}
+.banner-home-amp.banner2{height:40px;}
+.banner-home-amp.banner3{height:290px;}
+.banner-home-amp.banner4{height:290px;}
 *{
 	box-sizing: border-box;
 }
@@ -37,7 +41,7 @@ li{
 }
 
 .amp-main{
-	padding-top: 15px;
+	padding-top: 0px;
 }
 
 .FCHome .amp-main, .AmhhighlightsPage .amp-main{
@@ -81,9 +85,8 @@ amp-sidebar {
 }
 
 .amp-header-logo{
-  width: 150px;
-  height: 44px;
-  margin-top:2px;
+  width: 180px;
+  height: 54px;
 }
 
 .amp-header-cart{
@@ -339,10 +342,11 @@ amp-social-share:nth-last-child(1){margin-right: 0;}
 
 /* Home */
 .amp-home-section{
-  border-bottom: 20px solid #f0eeec;
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:15px;
+  padding-bottom:15px;
 }
+
+.amp-home-section h2{margin: 0;padding: 5px;font-size: 16px;}
 
 .amp-home-section-title{
   display: block;
@@ -1029,21 +1033,5 @@ amp-social-share:nth-last-child(1){margin-right: 0;}
 	display: block;
 	margin-top: 30px;
 	text-align: center;
-}
-
-.amp-img-bnr-home{
-	display:block;
-	position:relative;
-}
-.amp-img-bnr-home img{
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	position:absolute;
-}
-.amp-img-bnr-home .i-amphtml-fill-content{
-	height: auto !important;
-    min-height: auto !important;
 }
 </style>
