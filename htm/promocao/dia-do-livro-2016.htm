@@ -1,0 +1,64 @@
+<style>
+  .left-bar {
+    display: none;
+  }
+</style>
+<script language=JavaScript src=<BaseLoja>htm/JurosParcelas.js></script>
+<script>
+function MostraMaxParcela(PrecoProd,MaxParcelas){
+var ComSem;
+if(PrecoProd>=1000)MaxParcelas=10;
+  else if(PrecoProd>=100)MaxParcelas=9;
+  else if(PrecoProd>=30)MaxParcelas=6;
+  else if(PrecoProd>=1)MaxParcelas=1;
+  
+if(PrecoProd==0||MaxParcelas==1||Juros.length==0)return;
+if(MaxParcelas==0||MaxParcelas>Juros.length)MaxParcelas=Juros.length;
+if(Juros[MaxParcelas-1]>0)ComSem=""; else ComSem=" sem juros";
+document.write(MaxParcelas+"x de <b>"+FormatPrecoReais(CalculaParcelaJurosCompostos(PrecoProd,MaxParcelas))+"</b> "+ ComSem);
+}
+</script>
+
+<div class="MainContainer informacoes-da-loja">
+  <div class="row">
+    <div class="col-small-12 col-medium-12 col-large-12 col-xlarge-12 no-p banner-promocional">
+      <div class="desktop">
+      <banner 20>
+    </div>
+    <div class="mobile">
+      <banner 21>
+    </div>
+  </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="MainHomeBoxTitFC text-left">
+      <h2 class="titulo todos-ambientes"><tag-PROMO-DIADOLIVRO16-1-TITULO></h2>
+    </div>
+    <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12 no-p">
+      <div class="owl-carousel owlHome">
+        <tag-PROMO-DIADOLIVRO16-1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="MainHomeBoxTitFC text-left">
+      <h2 class="titulo organizacao"><tag-PROMO-DIADOLIVRO16-2-TITULO></h2>
+    </div>
+    <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12 no-p">
+      <div class="owl-carousel owlHome">
+        <tag-PROMO-DIADOLIVRO16-2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="MainHomeBoxTitFC text-left">
+      <h2 class="titulo destaques"><tag-PROMO-DIADOLIVRO16-3-TITULO></h2>
+    </div>
+    <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12 no-p">
+      <div class="owl-carousel owlHome">
+        <tag-PROMO-DIADOLIVRO16-3>
+      </div>
+    </div>
+  </div>
+</div>
