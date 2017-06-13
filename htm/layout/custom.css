@@ -1,0 +1,966 @@
+/* CSS Personalizado */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext);
+
+/* START - VARIAVEIS */
+.no-m{margin: 0px !important;}
+.no-m-t{margin-top: 0px !important;}
+.no-m-r{margin-right: 0px !important;}
+.no-m-b{margin-bottom: 0px !important;}
+.no-m-l{margin-left: 0px !important;}
+.no-p{padding: 0px !important;}
+.no-p-t{padding-top: 0px !important;}
+.no-p-r{padding-right: 0px !important;}
+.no-p-b{padding-bottom: 0px !important;}
+.no-p-l{padding-left: 0px !important;}
+.text-right{text-align: right;}
+.text-left{text-align: left;}
+.m-t-10{margin-top: 10px;}
+.m-t-20{margin-top: 20px;}
+.m-b-10{margin-bottom: 10px;}
+.m-b-20{margin-bottom: 20px;}
+
+[class*=btn-] {
+    transition: background-color .2s ease;
+}
+
+/* END - VARIAVEIS */
+.overflow-hidden{overflow: hidden;}
+.overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 99990;
+}
+#topcontrol{
+    right: 0px !important;
+    padding: 2px 10px;
+    background: #f4f4f4;
+}
+
+.MiniProduto:hover .prices, .MiniProduto:hover a{text-decoration: none;}
+.FootterMainBarFC{background: #f4f4f4;}
+
+.MainContainer{padding: 0;}
+@media only screen and (min-width: 1366px){
+    .MainContainer{width: 1008px;}
+}
+
+
+/* START - BANNER HOME */
+.base-banner-home{
+    display: none;
+    padding: 0px;
+}
+.FCHome .base-banner-home{display: block;}
+.base-banner-home .col-small-12{padding: 0;}
+.banner-frete{
+    margin: 8px 0 5px 0;
+}
+.banner-frete img,
+.banner-promocao-barratopo img{
+    width: 100%;
+    height: auto;
+}
+.banner-promocao-barratopo{
+	margin-bottom:5px;
+}
+
+.banner-promocional .desktop{display: block;width: 100%;height: auto;}
+.banner-promocional .mobile{display: none;width: 100%;height: auto;}
+.banner-promocional img{width: 100%;height: auto;}
+@media only screen and (max-width:1024px){
+    .logo-topo{text-align: center;}
+    .banner-promocional .mobile{display: block;}
+    .banner-promocional .desktop{display: none;}
+}
+.mini-banner-promocionais{margin-bottom:20px;}
+.mini-banner-promocionais .col-small-6 + .col-small-6{padding:0 15px 0 5px;}
+.mini-banner-promocionais .col-small-6 + .col-small-6 + .col-small-6{padding:0 5px 0 15px;}
+.mini-banner-promocionais .col-small-6:first-child{padding:0 20px 0 0 !important;}
+.mini-banner-promocionais .col-small-6:last-child{padding:0 0 0 20px !important;}
+
+.bnr-mini-promo-quadrado{
+	width:100%;
+	height:160px;
+	background:#e50719;
+	border-left: 8px solid #f3e821;
+	padding:8px 4px;
+	margin-bottom:15px;
+}
+
+.bnr-mini-promo-quadrado:hover{background:#b7000f;}
+.bnr-mini-promo-quadrado a, .bnr-mini-promo-quadrado a:hover {text-decoration:none;}
+
+.bnr-mini-promo-quadrado h3{font-size: 25px; font-weight: normal;line-height: 27px;color:#ffffff;}
+.bnr-mini-promo-quadrado h4{font-size:60px;line-height: 70px;color:#f3e821;font-weight: bold;vertical-align:middle;}
+.bnr-mini-promo-quadrado h4 small{font-size:20px;color:#f3e821;font-weight: normal;vertical-align:middle;}
+.bnr-mini-promo-quadrado p{font-size:12px;line-height: 24px;color:#ffffff;font-weight: normal;}
+
+.bnr-mini-mobile .bnr-mini-promo-quadrado{
+	width:100%;
+	height:130px;
+	background:#e50719;
+	border-left: 8px solid #f3e821;
+	padding:8px 4px;
+	margin-bottom:15px;
+}
+.bnr-mini-mobile .bnr-mini-promo-quadrado h3{font-size:18px;line-height: 22px;}
+.bnr-mini-mobile .bnr-mini-promo-quadrado h4{font-size:40px;line-height: 40px;}
+.bnr-mini-mobile .bnr-mini-promo-quadrado h4 small{font-size:12px;}
+
+/* END - BANNER HOME */
+
+.InputTextBusca.input[type="text"]{
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    }
+
+/* START - MENU TOPO */
+
+.base-menu-topo{
+    max-width: 1008px;
+    margin: 0 auto;
+    vertical-align: top;
+}
+.base-menu-topo:before {
+    display: table;
+    content: " ";
+}
+
+.HeaderMainMenuFC{
+    background: #F4F4F4;
+}
+ul.menu-desktop{
+    top: 0;
+    display: table;
+    width: 100% !important;
+    list-style: none;
+    -webkit-padding-start: 0px;
+    margin: 0;
+    padding: 0;
+    background: #F4F4F4;
+}
+
+ul.menu-desktop li{
+    display: table-cell;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0;
+    border: 0;
+    position: relative;
+}
+ul.menu-desktop li:hover a{
+    background: #72B84C;
+    color: #ffffff;
+    transition:fill 0.2s;
+}
+ul.menu-desktop li a svg{
+    margin-bottom: 2px;
+}
+ul.menu-desktop li:hover a svg{
+    transition:fill 0.2s;
+    fill: rgba(255, 255, 255, 1);
+}
+ul.menu-desktop li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 8px 2px;
+    font-size: 12px;
+    line-height: 16px;
+    border-top: 2px solid transparent;
+    color: #444;
+    text-decoration: none;
+}
+ul.menu-desktop li a span{
+  display: block;
+}
+ul.menu-desktop li.HeaderMenuHomeMobileFC a{
+  padding: 16px 10px;
+}
+ul.menu-desktop li.HeaderMenuHomeMobileFC:first-child a{
+  padding: 21px 10px;
+}
+
+ul.menu-desktop li.menu-liquidacao{
+	background: #f4ca20;color: #fff;
+}
+ul.menu-desktop li.menu-liquidacao a,
+ul.menu-desktop li.menu-liquidacao a h3,
+ul.menu-desktop li.menu-liquidacao a h4,
+ul.menu-desktop li.menu-liquidacao a h5{
+	font-size:11px !important;
+	padding:0;
+	margin:0;
+	line-height:14px !important;
+	font-weight: 100 !important;
+}
+ul.menu-desktop li.menu-liquidacao a h3{
+	background: #de141d;
+	color: #ffec00;
+	font-size: 14px !important;
+	line-height: 18px !important;
+	margin: -2px 0 0 0;
+	font-weight: 700 !important;
+}
+ul.menu-desktop li.menu-liquidacao a h4{
+	background: #ffec00;
+	color: #de141d;
+	font-size: 26px !important;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+}
+ul.menu-desktop li.menu-liquidacao a h5{
+	background: #ffec00;
+	color: #de141d;
+}
+
+ul.menu-desktop li.menu-liquidacao a:hover h3,
+ul.menu-desktop li.menu-liquidacao a:hover h4,
+ul.menu-desktop li.menu-liquidacao a:hover h5{
+	background: #de141d;
+	color: #ffec00;
+}
+
+/* START - MENU DESKTOP - SUBMENU */
+ul.menu-desktop li > ul{
+    width: 400px;
+    position: relative;
+    z-index: 999999;
+}
+
+ul.menu-desktop li > ul > .col-lista,
+ul.menu-desktop li > ul > .col-imagem{
+    width: 50%;
+    float: left;
+}
+ul.menu-desktop li > ul > .col-lista > li{
+    display: block;
+    text-align: left;
+    padding: 0;
+}
+ul.menu-desktop li > ul > .col-lista > li > a{
+    padding: 6px 0 6px 10px;
+    line-height: 24px;
+    display: block;
+    color: #fff;
+}
+ul.menu-desktop li > ul > .col-lista > li:hover > a,
+ul.menu-desktop li > ul > .col-lista > li a:hover{
+    background: #9CCE55;
+    border-color: transparent;
+}
+ul.menu-desktop li > ul > .col-imagem > a{
+    padding:0;
+    border: 0;
+    height: 280px;
+}
+ul.menu-desktop li > ul > .col-imagem > a > img{
+    opacity: 1;
+    width: 200px;
+    height: 280px;
+}
+ul.menu-desktop li > ul.sub-menu-right{
+    right:-4px;
+    position: absolute;
+}
+ul.menu-desktop li > ul.sub-menu-left,
+ul.menu-desktop li > ul.sub-menu-right{
+    display: none;
+    background: #72B84C;
+    position: absolute;
+    top:auto;
+}
+ul.menu-desktop li:hover > ul.sub-menu-left,
+ul.menu-desktop li:hover > ul.sub-menu-right{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+ul.menu-desktop li:hover > ul.sub-menu-right{
+    margin: 0 4px 0 0;
+}
+ul.menu-desktop li > ul.sub-menu-left:after,
+ul.menu-desktop li > ul.sub-menu-right:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    top: 0;
+    left:0;
+    background: rgba(0,0,0,0.1);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 62%, rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.1)), color-stop(62%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 62%, rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 62%, rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 62%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 62%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+/* END - MENU DESKTOP - SUBMENU */
+
+.HeaderCartMainIconFC path,
+  .HeaderCartMainIconFC circle{
+      transition:fill 0.4s;
+      fill: rgba(244, 202, 32, 1);
+  }
+
+.LoginMobile{display: none;}
+
+/* START - MENU BARRAESQUERDA.HTM */
+.EstListCat ul{
+    margin: 0;
+}
+.EstListCat ul.CatOpened > li span{
+    padding: 8px 0 !important;
+}
+.EstListCat ul.CatOpened > li > .PathCat0 + ul > li{
+    border-top: 1px solid #cccccc;
+    border-bottom: 0;
+    line-height: 12px;
+}
+
+.EstListCat ul.CatOpened > li > .PathCat1 + ul > li{
+    border-top: 1px solid #cccccc;
+    border-bottom: 0;
+    line-height: 12px;
+    margin-left: 25px;
+}
+.EstListCat ul.CatOpened > li > .PathCat1 + ul > li:first-child{margin-top:10px;}
+
+.EstListCat .ImgOpened,
+.EstListCat .ImgClosed {
+position: relative;
+background: none;
+}
+
+@media only screen and (max-width:1023px){
+    .EstListCat .ImgOpened:before,
+.EstListCat .ImgClosed:before {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
+    color: #333333;
+    font-size: 34px;
+    padding: 0 5px 0 5px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+.EstListCat .ImgOpened:before{
+    content: "\f107";
+}
+.EstListCat .ImgClosed:before{
+    content: "\f105";
+}
+
+}
+
+.EstListCat ul.CatOpened > li > .PathCat0 + ul > li:first-child{
+    margin-top: 10px;
+}
+.EstListCat ul.CatOpened > li > .PathCat0 + ul > li > .wid{
+    margin-right: 10px;
+}
+.EstListCat ul.CatOpened > li a{
+    font-size: 11px;
+    color: #666666;
+}
+.EstListCat ul.CatOpened > li:hover{
+    background: #eeeeee;
+}
+.EstListCat ul.CatOpened > li span:hover a,
+.EstListCat ul.CatOpened > li a.PathCatActive{
+    color: #72B84C;
+}
+.EstListCat ul.CatOpened > li:hover a,
+.EstListCat ul.CatOpened > li:hover a.PathCatActive{
+    color: #666666;
+}
+
+@media only screen and (max-width:768px){
+.EstListCat ul.CatOpened > li a{font-size: 16px;}
+.EstListCat li{padding:0px 0 12px 0 !important;}
+.EstListCat ul.CatOpened > li{border-bottom: 1px solid #eeeeee}
+.EstListCat .wid{width: 26px !important;}
+}
+
+/* END - MENU BARRAESQUERDA.HTM */
+
+/* START - MENU CATEGORIAS MOBILE */
+.menu-cat-mobile{display:none;width: 100%;overflow-y: hidden;overflow-x:auto;padding: 10px 0 0 0;}
+.menu-cat-mobile ul{margin: 0;padding: 0;width:1080px;}
+.menu-cat-mobile ul li{margin: 0 8px;line-height: 12px;padding: 20px 5px 10px 5px;display: inline-block;width: 100px;height: 100px;text-align: center;-webkit-border-radius: 100px;
+-moz-border-radius: 100px;border-radius: 100px;background: #63AF29;vertical-align: middle;}
+.menu-cat-mobile ul li a{font-size: 13px;line-height: 12px;font-family: 'Open Sans',verdana,arial;color: #ffffff}
+.menu-cat-mobile ul li a .HeaderMenuULIconFC{display: block;margin-bottom: 4px;}
+.menu-cat-mobile ul li a .HeaderMenuULIconFC svg path, .menu-cat-mobile ul li a .HeaderMenuULIconFC svg rect,
+ .menu-cat-mobile ul li a .HeaderMenuULIconFC svg polygon{fill: #ffffff}
+
+.menu-cat-mobile ul li.cozinha{background: #F6BE1F;}
+.menu-cat-mobile ul li.armario-facil{background: #a71922;}
+.menu-cat-mobile ul li.banheiro{background: #63AF29;}
+.menu-cat-mobile ul li.garagem-jardim{background: #006324;}
+.menu-cat-mobile ul li.lavanderia{background: #41b8e8;}
+.menu-cat-mobile ul li.escritorio{background: #444444;}
+.menu-cat-mobile ul li.gavetas-aramadas{background: #ea8843;}
+.menu-cat-mobile ul li.todos-ambientes{background: #036a8c;}
+.menu-cat-mobile ul li.laminato{background: #1A817D;}
+
+@media only screen and (max-width:768px){
+.menu-cat-mobile{display:block;}
+}
+
+/* END - MENU CATEGORIAS MOBILE */
+
+/* START - ADMIN */
+.MyAccOptOn{position: relative;background: #1a75d7;border: 0;}
+.MyAccOptOn a{color: #fff !important;}
+.MyAccOptOn:after{
+    content: '';
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #1a75d7;
+}
+#MyAccItemsMenu .MyAccOptOff{
+    background: transparent;
+}
+#MyAccItemsMenu .MyAccOptOff:last-child{
+    border-bottom: 0;
+}
+
+/* START - ADMIN */
+
+@media only screen and (max-width:768px){
+    .FCMyAccount #idFCLeftContentRight{padding: 5px;}
+    .FCDivAccess1EmailMyAcc{font-size: 14px}
+    .banner-frete {
+        display: none;
+    }
+  .base-menu-topo,
+  .HeaderMainMenuFC{
+    display: none;
+  }
+  .logotipo img{
+    width: 130px;
+  }
+  .HeaderCartMainFC{
+    position: absolute;
+    top: 2px;
+    width: 40px;
+    right: 10px;
+  }
+  .HeaderCartMainFC svg{
+      width: 35px;
+      height: 30px;
+  }
+  .HeaderCartMainFC #HeaderCartItemFC .CartItemTxt,
+  .HeaderCartMainFC #HeaderCartTotalFC{
+      display: none;
+  }
+  .HeaderCartMainFC #HeaderCartItemFC .idCartItemsTop{
+    margin: 0;
+    right: 8px;
+    top: -4px;
+    padding: 1px 3px;
+    font-size: 10px;
+    position: absolute;
+    background: #666666;
+    color: #ffffff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .HeaderContainerSocialLoginPosition .loginInfo:first-child span{
+      margin-right: 5px;
+  }
+  .SmallMenuContainer .SmallMenuButtom{
+      width: 45px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0;
+      font-size: 10px;
+      line-height: 6px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.6);
+  }
+  .SmallMenuContainer .SmallMenuButtom svg{
+    width: 32px;
+    height: 32px;
+  }
+  .SmallMenuContainer .SmallMenuButtom path{
+    transition:fill 0.4s;
+    fill: rgba(0, 0, 0, 0.6);
+  }
+  /*.SmallMenuContainer .HeaderMenuULFC{
+      margin:5px -10px 0 -10px;
+  }*/
+  .LoginMobile{display: block;}
+  .LoginDesk{display: none;}
+  .LoginMobile .HeaderContainerSocialLoginUL{
+      padding: 10px;
+      background: #eeeeee;
+      display: block;
+      text-align: center;
+  }
+  .LoginMobile .HeaderContainerSocialLoginUL li{
+      display: inline-block;
+  }
+  .SmallMenuContainer .HeaderMenuULFC li{
+      height: auto;
+      display: block;
+  }
+  .MenuMobileOpcoes{
+      height: 85px !important;
+      background: #eeeeee;
+      border-top:1px solid #ffffff;
+      border-bottom:1px solid #ffffff;
+  }
+  .MenuMobileAccount,
+  .MenuMobileOrders{
+    width: 50%;
+    padding: 15px 10px;
+    font-size: 10px;
+    float: left;
+    text-align: center;
+  }
+  .MenuMobileAccount{
+      border-right:1px solid #ffffff;
+  }
+  .MenuMobileAccount img,
+  .MenuMobileOrders img{
+      display: block;
+      margin: 0 auto 5px auto;
+  }
+  .MenuMobileAccount svg path,
+  .MenuMobileOrders svg path{
+      fill: #63AF29;
+  }
+}
+/* END - MENU TOPO */
+
+@media only screen and (min-width:1025px){
+/* START - BARRAESQUERDA.HTM */
+.left-bar{
+    padding: 0 8px 10px 8px !important;
+} 
+
+/* END - BARRAESQUERDA.HTM */
+}
+
+.DescontoPreco{padding: 5px;background: #f9f9f9;border:1px solid #eeeeee;color: #333333;font-size: 12px;}
+.DescontoPreco .imgdesconto, .DescontoPreco .txtdesconto{display: inline-block;vertical-align: middle;}
+.DescontoPreco .imgdesconto{height: 20px;}
+.DescontoPreco .txtdesconto{padding-left: 5px;}
+.DescontoPreco .txtdesconto span{color: #72B84C;}
+.DescontoPreco .txtdesconto span.detalhe-txt{color: #333333;}
+#idDivGridImg {position: relative;}
+#idDivGridImg .info-lancamento{position: absolute;right: 0;top: 0;}
+.detalhe-produto{position: relative;}
+.EconomiaPrice{width:40px;position: absolute;left: -55px;top: -5px;font-size:12px;margin:10px 0;color: #fff;font-weight:bold;background: #f47900;padding: 10px 5px 5px 5px;}
+.EconomiaPrice:after{
+  position: absolute;bottom:-20px;left:0;content: '';width: 0;height: 0;
+  border-left: 19px solid transparent;border-right: 20px solid transparent;border-top: 20px solid #f47900;
+}
+.FCHome .EconomiaPrice, .ProductList .EconomiaPrice, .FCCustom .EconomiaPrice{
+    left: auto;right: 0;top:0;margin:2px 2px 0 0;
+    padding: 8px 2px 5px 2px;
+}
+.ProductList .EconomiaPrice{
+    margin:2px 5px 0 0;
+}
+.FCHome .EconomiaPrice:after, .ProductList .EconomiaPrice:after, .FCCustom .EconomiaPrice:after{
+    bottom: -10px;
+    border-top: 10px solid #f47900;
+}
+@media only screen and (max-width:768px){
+.DescontoPreco .txtdesconto span.detalhe-txt{display: block;}
+.EconomiaPrice{position: absolute;left:auto;right:5px;top: -5px;}
+    .options-topo{
+        padding: 0;
+    }
+}
+
+/* START - SIMULACAO FRTETE */
+.simulacao-frete{
+    position: relative;
+    padding:5px;
+    margin-bottom: 10px;
+    background: #eee;
+    border: 1px solid #dddddd;
+    font-size: 14px;
+    color: #333333;
+    font-family: 'Open Sans',verdana,arial;
+}
+
+.simulacao-frete label input[type="text"]{
+        padding: 5px 15px;
+        border: 1px solid #cccccc;
+}
+.simulacao-frete label input[type="button"]{
+        padding: 5px;
+        background:#666666;
+        color: #ffffff;
+        border: 1px solid #333333;
+        cursor: pointer;
+}
+.simulacao-frete label input[type="button"]:hover{
+    background:#9CCE55;
+        color: #ffffff;
+        border: 1px solid #72B84C;
+}
+.simulacao-frete .resultado-frete{
+    margin-top: 5px;
+    font-size: 12px;
+    color: #333333;
+}
+.simulacao-frete #ImgLoadingCEP{
+    position: absolute;
+    top: 5px;
+    right:5px;
+}
+.info-frete{font-size: 12px;line-height: 12px;padding:0 0 5px 0;}
+/* END - SIMULACAO FRTETE */
+
+/* START - MEDIDAS PRODUTO */
+.det-medidas {
+    margin-bottom: 5px;
+    background: #f9f9f9;
+    border: 1px solid #eeeeee;
+    min-height: 110px;
+}
+.det-medidas h6{
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    padding: 5px;
+}
+.det-medidas .item{
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 5px;
+}
+.det-medidas .item img{
+    width: 30px;
+}
+.det-medidas .item + .item{
+    margin: 0 5%;
+}
+.det-medidas .item + .item + .item{
+    margin: 0;
+}
+.det-medidas .item .AdicNome{
+    display: block;
+}
+/* START - MEDIDAS PRODUTO */
+.btn-mais-detalhes{
+    clear: both;
+}
+
+.descr-prod{
+    padding: 0;
+}
+.descr-prod .descricao-txt{ text-align: left;}
+
+.owl-carousel .item{
+  padding:0;
+  margin:0;
+  text-align: center;
+}
+.owl-carousel .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+@media only screen and (min-width:1008px){
+    .owl-carousel .item img{
+        margin: 0 auto;
+    }
+}
+.customNavigation{
+  text-align: center;
+}
+.customNavigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h2.titulo{
+    font-size: 26px;
+    font-family: 'Open Sans',verdana,arial;
+    font-weight: 100;
+    padding: 5px;
+    margin: 10px 0;
+    border-left:6px solid;
+}
+h2.titulo.cozinha{color:#ca9500;border-color:#F6BE1F;}
+h2.titulo.armario{color:#DC1E2A;border-color:#DC1E2A;}
+h2.titulo.todos-ambientes{color:#1A817D;border-color:#1A817D;}
+h2.titulo.organizacao{color:#63AF29;border-color:#63AF29;}
+h2.titulo.destaques{color:#00A3D9;border-color:#00A3D9;}
+
+.apresentacao-aramado h3, .apresentacao-aramado h4{font-weight: 100;font-family: 'Open Sans',verdana,arial;}
+.apresentacao-aramado h3{font-size: 24px;color: #B41D8D;line-height: 34px;text-align: left;}
+.apresentacao-aramado h4{font-size: 14px;color:#333333;line-height: 18px;text-align: justify;}
+
+/* START - MINI HOME PRODUTO */
+.MiniProduto{
+    width: 100%;
+    min-height: 300px;
+    padding: 10px;
+    /*border: 1px solid #ffffff;
+    border-bottom-width: 2px;*/
+}
+.ProductList .MiniProduto{min-height: 415px;}
+/*.FCCustom .MiniProduto{min-height: 415px;}*/
+.MiniProduto:hover{
+    /*border-color: #63AF29;*/
+    background: #f6f6f6;
+    cursor: pointer;
+}
+.MiniProduto .FotoProduto img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+.MiniProduto .InfoProduto .NomeProduto h3{
+    padding: 5px 0 0 0;
+    font-size: 14px;
+    font-family:'Open Sans',verdana,arial;
+    font-weight:100;
+    color: #333333;
+    line-height: 20px;
+}
+.MiniProduto:hover .InfoProduto .NomeProduto h3{
+    color: #ca9500;
+}
+.MiniProduto .InfoProduto .prices .price{
+    margin: 8px 0;
+}
+.MiniProduto .InfoProduto .ProdRating,
+.MiniProduto .InfoProduto .ProdRating .ProductStyleReviewStarsOnFC table,
+.MiniProduto .InfoProduto .ProdRating .ProductStyleReviewStarsOnFC,
+.MiniProduto .InfoProduto .ProdRating .ProductStyleReviewOnBoxFC,
+.MiniProduto .InfoProduto .ProdRating .ProductStyleReviewOffBoxFC table,
+.MiniProduto .InfoProduto .ProdRating .ProductStyleReviewOffBoxFC{
+    float: none;
+    margin: 0 auto;
+}
+.ProductStyleReviewOffBoxFC .NotaOpiniaoVazio{
+    float: none;
+    display: inline-block;
+}
+.ProductStyleReviewOffBoxFC .NotaOpiniaoVazio.NotaOpiniaoVazio6{
+    display: none;
+}
+
+.FCHome .MiniProduto .prices,
+.ProductList .MiniProduto .prices,
+.FCCustom .MiniProduto .prices{
+    color: #333333;
+    font-size: 14px;
+    white-space: normal;
+}
+.FCHome .MiniProduto .prices b,
+.ProductList .MiniProduto .prices b,
+.FCCustom .MiniProduto .prices b{
+    display: block;
+    margin:0;
+    color:#44ac55;
+    font-size: 35px;
+    font-family: 'Open Sans',verdana,arial;
+    font-weight: 400; 
+}
+.FCHome .MiniProduto .prices b .FCPrice .FCCurrencyLabel,
+.FCHome .MiniProduto .prices b .FCPrice .FCPriceValue .FCPriceCent,
+.FCCustom .MiniProduto .prices b .FCPrice .FCPriceValue .FCPriceCent,
+.ProductList .MiniProduto .prices b .FCPrice .FCCurrencyLabel,
+.ProductList .MiniProduto .prices b .FCPrice .FCPriceValue .FCPriceCent,
+.FCCustom .MiniProduto .prices b .FCPrice .FCPriceValue .FCPriceCent{font-size: 18px;}
+/* END - MINI HOME PRODUTO */
+
+
+/* START - MODAL DETALHE DO PRODUTO HTML */
+.modal-detalhe-produto-html{
+    display: none;
+    position: fixed;
+    top: 80px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    background: #ffffff;
+    border:4px solid rgba(0,0,0,0.2);
+    z-index: 99999;
+    font-size: 12px;
+}
+.fechar-detalhe-produto-html,
+.btn-detalhe-produto-html{
+    padding: 5px;
+    border: 2px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.btn-detalhe-produto-html{
+    background: #00A3D9;
+    color: #ffffff;
+    font-size: 14px;
+    margin:20px 0 0 0;
+}
+.btn-detalhe-produto-html:hover{background: #333333;}
+.modal-detalhe-produto-html .opcoes{
+    width: 100%;
+    height: 50px;
+    text-align: right;
+}
+.fechar-detalhe-produto-html,
+.btn-fechar{
+    background: #DC1E2A;
+    color: #ffffff;
+}
+.fechar-detalhe-produto-html:hover,.btn-fechar:hover{background: #a71922;}
+.fechar-detalhe-produto-html{
+position: absolute;
+    right: 8px;
+    top: 8px;
+    margin: 0;
+}
+.modal .modal-body img{
+    max-width: 100%;
+}
+
+.btn-ir-carrinho{line-height: 18px;padding: 14px 0 0 0;display: block;}
+
+.detalhe-prod-parcelamento{font-size: 13px;}
+
+@media only screen and (max-width:768px){
+    .apresentacao-aramado{display: none;}
+    .ProductList .MiniProduto,
+    .FCCustom .MiniProduto{min-height: 350px;}
+    h2.titulo{font-size: 20px;}
+    .FCHome .MiniProduto .prices b,
+    .ProductList .MiniProduto .prices b,
+    .FCCustom .MiniProduto .prices b{
+        font-size: 30px;
+    }
+
+    .MiniProduto .PrecoProduto .installments{
+        white-space: normal;
+    }
+
+    .modal-detalhe-produto-html{
+        height: 400px;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .modal-detalhe-produto-html .conteudo{height: 330px;}
+    .modal-detalhe-produto-html .opcoes .fechar-detalhe-produto-html,
+    .btn-detalhe-produto-html{
+        width: 100%;
+        display: block;
+    }
+}
+/* END - MODAL DETALHE DO PRODUTO HTML */
+
+/* START - CARRINHO */
+.FCCart #idFCLeftContentRight #idFCContent{padding: 0 5px}
+.FCCartSmallProd .FCCartQtyInput{text-align: left !important;}
+@media only screen and (max-width:768px){
+    .FCCartSmallProd .FCCartQtyInput{min-width: 60px;margin-top: 4px;}
+}
+
+/* END - CARRINHO */
+
+/* START - RODAPE */
+.info-adicional{padding-bottom:30px;}
+.info-adicional p{font-size: 10px;line-height: 10px;}
+.info-segunranca li img{height: 40px;}
+/* END - RODAPE */
+
+/* START - FORMAS DE PAGAMENTO */
+.informacoes-da-loja h2.titulo{margin: 50px 0 30px 0;}
+.informacoes-da-loja .panel-title, panel-body{text-align: left;}
+.panel-group .panel-heading{background: #f4f4f4;border: 1px solid #eeeeee}
+.panel-group .panel-heading h4{margin: 0;font-size: 18px;}
+.panel-group .panel-heading h4 a{padding: 10px;color: #333333;display: block}
+.panel-group .panel-body{padding: 10px;text-align: left;border: 1px solid #eeeeee;border-top: 0;}
+.MainHomeBoxTitFC p{
+    padding: 10px 0 20px 0;
+}
+
+.informacoes-duvidas h2{font-weight: 400;}
+
+.bandeiras-pgto{margin: 0;padding: 0;}
+.bandeiras-pgto li{margin: 0 0 10px 0;padding: 0;list-style: none;}
+.bandeiras-pgto li img{margin: 0 10px 0 0;padding: 0;}
+
+.formas-envio{
+    margin: 20px 0 20px 0;
+}
+.formas-envio li:first-child{
+    font-weight: 700;
+}
+.dica-como-comprar{margin: 20px 0 0 0}
+.dica-como-comprar .item img{
+    width: 100%;
+}
+
+/* END - FORMAS DE PAGAMENTO */
+
+
+/* START - SALDAO DE PRODUTOS */
+.saldao-filtro-preco h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 100;
+    color: #44ac55;
+    margin: 10px 0 20px 0;
+}
+.saldao-filtro-preco .lista-filtro{margin: 0;padding: 0;text-align: center;font-size: 18px;}
+.saldao-filtro-preco .lista-filtro li{
+    margin: 0 0 4px 0;padding: 0;list-style: none;display: inline-block;background: #63AF29;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    }
+.saldao-filtro-preco .lista-filtro li a{
+    display:block;padding: 10px 20px;color: #ffffff;
+    text-decoration: none;
+    }
+.saldao-filtro-preco .lista-filtro li a small{margin-right: 2px;}
+.saldao-filtro-preco .lista-filtro li:hover{background: #B41D8D;}
+@media only screen and (max-width:768px){
+    .saldao-filtro-preco h2{
+        font-size: 18px;
+        margin: 5px 0 10px 0;
+    }
+    .saldao-filtro-preco .lista-filtro li a{padding: 8px 20px;}
+}
+/* END - SALDAO DE PRODUTOS */
