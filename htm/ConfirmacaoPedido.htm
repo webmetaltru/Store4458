@@ -1,0 +1,139 @@
+<style>#idTxtPedConfirmadoFC{height:30px;padding:10px;background-color:#007dd4;color:#fcfcfc;font-size:14pt;}#idDadosPagtoFC{font-size:9pt;}#EstNomePagto{color:#555555;font-size:11pt;font-weight:bold;}#PassosCompra,.idTxtPrintFC{display:none;}</style>
+
+<script>
+	var id1 = "<IDProduto1>";
+	var id2 = "<IDProduto2>";
+	var id3 = "<IDProduto3>";
+	var id4 = "<IDProduto4>";
+	var id5 = "<IDProduto5>";
+	var id6 = "<IDProduto6>";
+	var id7 = "<IDProduto7>";
+	var id8 = "<IDProduto8>";
+	var id9 = "<IDProduto9>";
+	var id10 = "<IDProduto10>";
+	var id11 = "<IDProduto11>";
+	var id12 = "<IDProduto12>";
+	var id13 = "<IDProduto13>";
+	var id14 = "<IDProduto14>";
+	var id15 = "<IDProduto15>";
+	var id16 = "<IDProduto16>";
+	var id17 = "<IDProduto17>";
+	var id18 = "<IDProduto18>";
+	var id19 = "<IDProduto19>";
+	var id20 = "<IDProduto20>";	
+
+	var itens = [];
+	
+	if(id1.indexOf("IDProduto") != 1) itens.push(id1);
+	if(id2.indexOf("IDProduto") != 1) itens.push(id2);
+	if(id3.indexOf("IDProduto") != 1) itens.push(id3);
+	if(id4.indexOf("IDProduto") != 1) itens.push(id4);
+	if(id5.indexOf("IDProduto") != 1) itens.push(id5);
+	if(id6.indexOf("IDProduto") != 1) itens.push(id6);
+	if(id7.indexOf("IDProduto") != 1) itens.push(id7);
+	if(id8.indexOf("IDProduto") != 1) itens.push(id8);
+	if(id9.indexOf("IDProduto") != 1) itens.push(id9);
+	if(id10.indexOf("IDProduto") != 1) itens.push(id10);
+	if(id11.indexOf("IDProduto") != 1) itens.push(id11);
+	if(id12.indexOf("IDProduto") != 1) itens.push(id12);
+	if(id13.indexOf("IDProduto") != 1) itens.push(id13);
+	if(id14.indexOf("IDProduto") != 1) itens.push(id14);
+	if(id15.indexOf("IDProduto") != 1) itens.push(id15);
+	if(id16.indexOf("IDProduto") != 1) itens.push(id16);
+	if(id17.indexOf("IDProduto") != 1) itens.push(id17);
+	if(id18.indexOf("IDProduto") != 1) itens.push(id18);
+	if(id19.indexOf("IDProduto") != 1) itens.push(id19);
+	if(id20.indexOf("IDProduto") != 1) itens.push(id20);
+
+fbq('track', 'Purchase', {
+           content_type: 'product',
+           content_ids: itens,
+           value: '<TotalPrazo>',
+           currency: 'BRL'
+       });
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=502488773187508&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<script type="text/javascript">
+if(FC$.Page!="Checkout"){
+  var iFormaPagto="<IDFormaPagamento>";
+  
+  if(iFormaPagto=="3"){ /*Cartão de crédito*/
+    var sFormaPagto="<FormaPagamento> (<TipoCartao>)"
+    setTimeout("document.getElementById('idDadosPagtoTitFC').innerHTML='<td class=EstTabTopo colspan=2 align=center>Forma de pagamento</td>';",100); /*Altera titulo da parte inferior dos dados para pagamento */
+    }
+    else{
+    var sFormaPagto="<FormaPagamento>"
+    setTimeout("document.getElementById('idDadosPagtoTitFC').style.display='none';",100); /*Altera titulo da parte inferior dos dados para pagamento */
+  }
+  
+  var sDadosPagto="<br><br><table width=97% align=center class=EstTabPedido><tr height=25><td class=EstTabPedidoTit align=center>Dados para pagamento:</td></tr><tr><td align=center><br><span id=EstNomePagto>"+ sFormaPagto +"</span><br><br>"+ document.getElementById('idDadosPagtoFC').innerHTML +"</td></tr></table>"; /*Instruções e botão para pagamento*/
+  var sBannerEbit="";  /*Banner do e-bit */
+  
+  setTimeout("document.getElementById('idDadosPagtoFC').innerHTML='';",10); /*Remove da parte inferior os dados para pagamento */
+  setTimeout("document.getElementById('idTopoConfirmacaoFC').innerHTML=sDadosPagto+sBannerEbit+'<br><br><span class=Titulos>Informações do seu pedido:</span>';",10);  /*Insere no topo da página de pedido confirmado as instruções para pagamento + banner do ebit */
+}
+</script>
+
+<!-- START - BING ADS -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5526273"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5526273&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
+<!-- END - BING ADS -->
+
+<!-- BEGIN Google Avaliações do Consumidor -->
+<script>
+Date.prototype.addDays = function(days) {
+this.setDate(this.getDate() + parseInt(days));
+return this;
+};
+function fnDateGoogle(){
+var currentDate=new Date();
+currentDate.addDays(20);
+var month=currentDate.getUTCMonth()+1;
+var day=currentDate.getUTCDate();
+var year=currentDate.getUTCFullYear();
+day=day+"";
+month=month+"";
+if(day.length==1)day="0"+day;
+if(month.length==1)month="0"+month;
+var newdateGoogle=year +"-"+ month +"-"+ day;
+return newdateGoogle;
+}
+F$.fnLoadScript('https://apis.google.com/js/platform.js?onload=renderOptIn',true);
+</script>
+<script>
+window.renderOptIn = function() {
+window.gapi.load('surveyoptin', function() {
+window.gapi.surveyoptin.render(
+{
+"merchant_id": 6086047,
+"order_id": "<NumPedido>",
+"email": "<EmailPedido>",
+"delivery_country": "BR",
+"estimated_delivery_date": fnDateGoogle()
+});
+});
+}
+</script>
+<script>
+window.___gcfg = {
+lang: 'pt_BR'
+};
+</script>
+<!-- END Google Avaliações do Consumidor -->
+
+<script type ='text/javascript' src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>
+<script type ='text/javascript'>
+  var data_array = [
+    { name: 'email', value: '<EmailPedido>' },
+    { name: 'identificador', value: 'COMPRA_FINALIZADA' },
+    { name: 'token_rdstation', value: '85c77c0789f2ef492a80a5045bc52182' },
+    { name: 'nome', value: '<NomePedido>' },
+	{ name: 'NumPedido', value: '<NumPedido>' }
+  ];
+
+  RdIntegration.post(data_array, function () { });
+</script>
