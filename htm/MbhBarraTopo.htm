@@ -1,0 +1,116 @@
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" type="text/css" href="<BaseLoja>htm/css/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="<BaseLoja>htm/css/slick/slick-theme.css"/>
+<link rel="stylesheet" href="<BaseLoja>htm/css/bootstrapmin.css">
+<link rel="stylesheet" href='<PathTo file="htm/LojaSite.css">'>
+<link rel="stylesheet" href='<PathTo file="htm/layout/custom.css">'>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!-- Includes Javascript -->
+<script src='<PathTo file="htm/JurosParcelas.js">'></script>
+<script src='<PathTo file="htm/MbhLojaLib.js">'></script>
+<script type="text/javascript" src="/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/jquery-2.1.1.min.js"></script>
+<script src='<PathTo file="htm/js/bootstrapmin.js">'></script>
+<script type="text/javascript" src='<PathTo file="htm/js/slick/slickmin.js">'></script>
+<script src='<PathTo file="htm/add_scripts.js">'></script>
+
+<script>
+if(FC$.Page=="Checkout"){
+  FCLib$.loadAsyncCSS('<PathTo file="htm/checkout.css">');
+}
+</script>
+<!-- Badge FRETE GRÁTIS -->
+<div id="badgeFreteGratis" class="actualElement ie10up">
+  <div class="badgeFreteGratis-fecharmbh" data-active="true">
+  </div>
+  <img class="img-shipping" src='<PathTo file="images/icon_shipping.svg">'><br>
+  <div id="zFTotalFreeFreight">
+    Faltam <b> R$ 160,00</b><br>
+    para ganhar<br>
+    <a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><img src="<BASELOJA>images/frete-gratis.gif" border="0"></a>
+	p/ Sul e Sudeste.
+	<a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><b>*Veja sua região</b></a>
+  </div>
+</div>
+
+  <script>  
+  function showHide(dataAttr) {
+    var elemClick = document.querySelector('[' + dataAttr + ']');
+    var elemToShowHide = document.querySelector('#badgeFreteGratis');
+    var elemClickAttr = elemClick.getAttribute(dataAttr);
+
+    elemClick.addEventListener('click', function () {
+      if (elemClickAttr == "true") {
+        elemClickAttr = "false";
+        elemToShowHide.setAttribute('class', 'changeElement ie10upClosed');
+      }
+      else {
+        elemClickAttr = "true";
+        elemToShowHide.setAttribute('class', 'actualElement ie10up');
+      }
+
+    }, false)
+  }
+  showHide("data-active");  
+  </script>  
+
+<!-- FIM - Badge FRETE GRÁTIS -->
+
+<div class="MainContainer no-p" style="position:relative">
+<div class="row topo-mobile">
+	<nav class="SmallMenuContainer">
+		<div class="SmallMenuButtom">
+			<tag-FCHeaderMenuMobileIcon>
+		</div>
+		<ul class="SmallMenuList HeaderMenuULFC" style="display:none;">
+			<li class="HeaderSocialLoginPosition LoginMobile">
+				<tag-FCHeaderSocialLogin>
+			</li>
+			<tag-FCHeaderMenuMobileOpcoes>
+				<li>
+					<ListPathCat out="10" id="1">
+				</li>
+		</ul>
+	</nav>
+	<div class="logo-mobile">
+		<tag-FCHeaderLogo>
+	</div>
+	<div class="HeaderCartMainFC text-right">
+		<a href="/addProduto.asp?idloja=<IDLojaNum>">
+      <div class="HeaderCartMainIconFC">
+        <img64 src="<BaseLoja>images/IconShopCart.svg" plain="true" width="35" height="35">
+      </div>
+    </a>
+    <a href="/addProduto.asp?idloja=<IDLojaNum>">
+      <div class="HeaderCartMainItemTotalFC">
+        <div id="HeaderCartItemFC"><span id="idCartItemsTop"></span></div>
+      </div>
+    </a>
+    <script>FCLib$.onReady(function(){sF$.fnUpdateCart(false,false);});</script>
+	</div>
+	<div class="col-small-12 col-medium-12 no-p busca-topo">
+		<form name="TopSearchForm" method="GET" id="autocomplete-form" action="/listaprodutos.asp">
+			<input type="hidden" name="idloja" value="<IDLojaNum>">
+			<input type="hidden" name="digitada" value="true">
+			<div class="HeaderSearchFC">
+				<div id="DivSearch">
+					<div class="col-small-10 col-medium-10 col-large-10 col-xlarge-10 no-p">
+						<input type="text" id="autocomplete" value="<SearchText>" name="Texto" class="InputTextBusca" placeholder="Digite sua busca aqui">
+					</div>
+					<div class="col-small-2 col-medium-2 col-large-2 col-xlarge-2 no-p">
+						<a href="#search" onclick="sF$.fnSearchSubmit(document.TopSearchForm);" class="btn1 btn-sent HeaderIconSearchButtonFC"><span class="HeaderSerachIMGIconFC"><img64 src="<BaseLoja>images/IconSearch.svg" plain="true" width="25" height="25" style="margin-top: 4px;" alt="Buscar" title="Buscar"></span></a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+
+<!-- Begin Aside BarraEsquerda.htm - Close Rodape.htm - Don't remove -->
+<div class="MainContainer no-p">
+	<div class="row">
