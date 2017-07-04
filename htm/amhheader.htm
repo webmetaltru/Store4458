@@ -19,10 +19,12 @@ body{font-family: "Helvetica Neue",Helvetica,Arial,Roboto,sans-serif;background-
 header{background-color: #e5e5e5;max-width: 600px; margin:0 auto; padding-bottom: 10px;}
 footer,section{max-width: 600px; margin:0 auto;background-color: #fff;}
 .banner-home-amp{position:relative;}
-.banner-home-amp.banner1{height:100px;}
-.banner-home-amp.banner2{height:40px;}
-.banner-home-amp.banner3{height:290px;}
-.banner-home-amp.banner4{height:290px;}
+.banner-home-amp.banner1{height:200px;margin-bottom:2px;}
+.banner-home-amp.banner2{height:100px;margin-bottom:2px;}
+.banner-home-amp.banner3{height:40px;margin-bottom:2px;}
+.banner-home-amp.banner4{height:50px;}
+.banner-home-amp.banner5{height:290px;}
+.banner-home-amp.banner6{height:290px;}
 *{
 	box-sizing: border-box;
 }
@@ -360,7 +362,8 @@ amp-social-share:nth-last-child(1){margin-right: 0;}
 }
 
 .amp-prod-home{
-  padding:20px;
+  padding:10px;
+  width:180px;
 }
 
 .amp-prod-home-img{
@@ -387,12 +390,19 @@ amp-social-share:nth-last-child(1){margin-right: 0;}
   padding:5px;
   margin:15px 0 3px 0;
   cursor:pointer;
-  background-color: #e5e5e5;
+  background-color: #1c9a31;
+  color:#ffffff;
   border-radius: 2px;
 }
 
 .amp-prod-home-price{
-  height: 35px;
+  height: 60px;
+}
+
+.amp-prod-home-price p{
+  margin:0;
+  color:#777777;
+  font-size: .8em;
 }
 
 .amp-prod-home-price .FCPrice{
@@ -405,6 +415,7 @@ amp-social-share:nth-last-child(1){margin-right: 0;}
 
 .amp-prod-home-price .FCPriceSale, .amp-prod-home-price .FCPriceProd{
   font-weight: bold;
+  font-size:2rem;
 }
 
 .amp-prod-home-price .FCPriceProd .FCCurrencyLabel, .amp-prod-home-price .FCPriceProd .FCPriceCent, .amp-prod-home-price .FCPriceSale .FCCurrencyLabel, .amp-prod-home-price .FCPriceSale .FCPriceCent{

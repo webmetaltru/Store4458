@@ -558,6 +558,31 @@ background: none;
 }
 /* END - MENU TOPO */
 
+/* START - BARRA INFORMACOES HOME (FRETE, DESCONTO A VISTA, SEGURANCA E PARCELAMENTO) */
+.bar-info-home{background:#f4f4f4;border:1px solid #ccc;margin: 8px 0;}
+.bar-info-home .compra-segura ul,.bar-info-home .desconto-avista ul,
+.bar-info-home .frete-gratis ul,.bar-info-home .parcelamento ul{margin:0;padding:0;text-align:left;}
+.bar-info-home .compra-segura ul li,.bar-info-home .desconto-avista ul li,
+.bar-info-home .frete-gratis ul li,.bar-info-home .parcelamento ul li{list-style:none !important;margin:0;padding:5px;display:inline-block;vertical-align:middle;}
+
+.bar-info-home a{color:#333;}
+.bar-info-home a:hover{color:#72b84c;}
+
+.bar-info-home h3{margin:0;font-weight:bold;font-size: 16px;line-height: 18px;}
+.bar-info-home h4{margin:0;font-weight:normal;font-size:12px;line-height: 12px;}
+.bar-info-home .compra-segura ul li svg,.bar-info-home .desconto-avista ul li svg,
+.bar-info-home .frete-gratis ul li svg,.bar-info-home .parcelamento ul li svg{width:40px;height:40px;}
+.bar-info-home .compra-segura ul li svg path,.bar-info-home .desconto-avista ul li svg path,
+.bar-info-home .frete-gratis ul li svg path,.bar-info-home .parcelamento ul li svg path{fill: #333333;}
+.bar-info-home a:hover ul li svg path{fill:#72b84c;}
+.bar-info-home a:hover ul li svg rect{fill:#72b84c;}
+
+.bar-info-home .compra-segura ul li:first-child,.bar-info-home .desconto-avista ul li:first-child,
+.bar-info-home .frete-gratis ul li:first-child,.bar-info-home .parcelamento ul li:first-child{width:40px;height: 50px;}
+.bar-info-home .compra-segura ul li:last-child,.bar-info-home .desconto-avista ul li:last-child,
+.bar-info-home .frete-gratis ul li:last-child,.bar-info-home .parcelamento ul li:last-child{max-width:80%;}
+/* END - BARRA INFORMACOES HOME (FRETE, DESCONTO A VISTA, SEGURANCA E PARCELAMENTO) */
+
 @media only screen and (min-width:1025px){
 /* START - BARRAESQUERDA.HTM */
 .left-bar{

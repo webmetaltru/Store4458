@@ -1,7 +1,7 @@
 </div>
 </div>
 <!-- End Aside BarraEsquerda.htm - Open BarraTopo.htm - Don't remove -->
-
+<script type ='text/javascript' src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>
 <!-- NOVO PIXEL Facebook DSS Pixel Code -->
 <script>
 if (FC$.Page == "Cart") {
@@ -23,6 +23,10 @@ if (FC$.Page == "Cart") {
     }
   }
   FCLib$.onReady(FB_AddToCart_ProductID);
+  
+	setTimeout(function(){
+	  jQuery('#InfoBanners').hide();
+	}, 100);
 }
 </script>
 <!-- End Facebook Pixel Code -->
@@ -35,7 +39,7 @@ if (FC$.Page == "Cart") {
 <!--<div class="row FullSpaceFC"></div>-->
 
 <!-- Begin: 3 banners - Payment, Locker and Delivery -->
-<div class="MainContainer InfoBanners">
+<div class="MainContainer InfoBanners" id="InfoBanners">
   <div class="row">
     <!-- Begin: Banner Payment -->
     <div class="col-small-6 col-medium-6 col-large-3 col-mlarge-3 col-xlarge-3 text-center FooterInfosContainer">

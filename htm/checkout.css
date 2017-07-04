@@ -40,6 +40,8 @@ table,tbody, tfoot, thead, tr, th, td{outline:0;font-size:100%;background:transp
 .radius{border-radius:4px;overflow:hidden;}
 .rounded{border-radius:10px;overflow:hidden;}
 
+.HeaderPedBTCompanyTxtFC{font-size: 14px !important;}
+
 /* Alignment */
 .text-center{text-align:center !important;}.text-left{text-align:left !important;}.text-right{text-align:right !important;}
 
@@ -185,7 +187,7 @@ select{min-height:27px;}
 #idTabLoginFC{width:100%;margin:0 auto;padding:0 5px 0 5px;}
 #idTabLoginFC #Email{width:100%;}
 #idChkLoginIntFC .EstChkNomeCampo{vertical-align:middle;}
-#idChkOrderConfirmationFloat, #idDivLinkContinueFC{width:262px !important;border-radius:3px !important;border:0;margin-bottom:20px;}
+#idChkOrderConfirmationFloat, #idDivLinkContinueFC{width:95% !important;border-radius:3px !important;border:0;margin-bottom:20px;}
 #idCheckoutFC a #idTxtLinkContinueFC{background-color:#6ea853;padding:20px;cursor:pointer;border-radius:3px !important;color:#FFFFFF;font-weight:bold;text-align:center;}
 #idChkTabResellerFC{margin:0 auto;}
 #SenhaAtual{margin:0 0 0 5px;width:65% !important;}
@@ -193,7 +195,7 @@ select{min-height:27px;}
 .EstChkDiv{border-radius:0px !important;}
 #P2Estado{width:45px !important;}
 #idChkTabRegisterFC tr td{vertical-align:middle !important;}
-#idCheckoutFC .EstChkTabTopo{border-radius:3px !important;}
+#idCheckoutFC .EstChkTabTopo{border-radius:0px !important;}
 #idChkCol3FC td{padding:8px 4px;box-sizing:border-box;}
 #idChkCompletionIntFC{width: 100%;}
 #idChkCompletionIntFC span{line-height:22px;font-size:13px;}
@@ -230,7 +232,7 @@ select{min-height:27px;}
  } 
 
  /* REGISTER */
- .FCRegisterChk{width:295px!important;}
+ /*.FCRegisterChk{width:295px!important;}*/
  #idChkRegisterIntFC{max-width:295px !important;}
 
  /* FREIGHT/ PAYMENT */
@@ -252,6 +254,10 @@ table {display: table!important;border-collapse: separate!important;border-spaci
 }
 
 @media only screen and (max-width:640px){
+	
+.FCCheckout #idCheckoutFC #idChkCol1FC, .FCCheckout #idCheckoutFC #idChkCol2FC, .FCCheckout #idCheckoutFC #idChkCol3FC{
+	padding: 2px;
+}
 
  #idFCContent{max-width:100% !important;margin:0px auto;}
  .FCCheckoutLogin{width:100%;padding:0 10px;}
@@ -260,7 +266,7 @@ table {display: table!important;border-collapse: separate!important;border-spaci
  
  #idChkAllFC {width:100%!important;}
  .FCCheckoutMain{width:100%;}
- .FCChkOrderConfirmationFloat{} 
+ .FCChkOrderConfirmationFloat{position: fixed;bottom: 40px;z-index: 1;} 
 
  /* REGISTER */
  .FCRegisterChk{width:100%!important;}
@@ -294,7 +300,7 @@ table {display: table!important;border-collapse: separate!important;border-spaci
  #idChkAllFC{width:990px!important;}
  #idChkRegisterIntFC{width:100%!important;max-width:310px!important;}
  #idChkFreightIntFC{width:310px!important;max-width:310px!important;}
- #idChkPaymentIntFC{width:100%!important;max-width:310px!important;}
+ #idChkPaymentIntFC{width:420px !important;max-width:420px!important;}
  #idChkCartIntFC{width:100%!important;/*330px*/min-width:335px!important;}
 
  #idChkRegisterFC input[type='text'], #idChkRegisterFC input[type='password']{margin:2px 0;}
@@ -315,9 +321,9 @@ table {display: table!important;border-collapse: separate!important;border-spaci
  #idChkPaymentIntFC{max-width:420px!important;}
 
  /* CART */
- .FCCartChk{width:420px!important;}
- #idChkExtCartFC{max-width:420px !important;padding:0 8px;}
- #idChkCartIntFC{min-width:420px !important;width:100% !important;}
+ .FCCartChk{width:400px!important;}
+ #idChkExtCartFC{max-width:400px !important;padding:0 8px;}
+ #idChkCartIntFC{min-width:400px !important;width:100% !important;}
 }
 
 /* START - PERSONALIZADO */

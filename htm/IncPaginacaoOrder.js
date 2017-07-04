@@ -11,8 +11,8 @@ sOrdenacao="<table><tr><td>";
   sOrdenacao+="<option value=3>Nomes das categorias</option>";
   sOrdenacao+="<option value=4>Nomes dos produtos</option>";
   sOrdenacao+="<option value=5>Avaliações dos clientes</option>";
-  sOrdenacao+="<option value=7>Preços menores</option>";
-  sOrdenacao+="<option value=8>Preços maiores</option>";
+  sOrdenacao+="<option value=6>Preços menores</option>";
+  sOrdenacao+="<option value=7>Preços maiores</option>";
   sOrdenacao+="</select>&nbsp;&nbsp;";
   sOrdenacao+="</td></tr></table>"; 
 }

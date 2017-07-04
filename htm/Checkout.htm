@@ -25,18 +25,23 @@
 </div>
 <script type ='text/javascript' src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>
 <script>
-	var data_array = [
-		{ name: 'email', value: 'P2Email' },
-		{ name: 'identificador', value: 'FEZ_LOGIN' },
-		{ name: 'token_rdstation', value: '85c77c0789f2ef492a80a5045bc52182' },
-		{ name: 'nome', value: 'P2Nome' }
-	];  
-	function FuncChkRegisterEnd(){
+	function FuncChkRegisterEnd(oHTTP, IsAdd, IsSpy){
 		if(F$.Step==0){
+			jQuery("#badgeFreteGratis").hide();
+			
 			
 		}
 		if(F$.Step==1){
-		//RdIntegration.post(data_array, function () { console.log(data_array)});
+		
+		//var urlCart = "https://www.aramado.com/cartlist.asp";
+		//jQuery.ajax({
+		//	url: urlCart,
+		//	complete: function(data) {
+		//		console.log(data.responseXML);
+		//	}
+		//});
+			
+		jQuery("#badgeFreteGratis").hide();
 		// selecione automaticamente opção de frete retira loja
 			jQuery(function ($) {
 				var firstOptFreight = document.querySelector('#idTabFreteOptFC > tbody > tr > td > input[type=radio]');
@@ -56,6 +61,7 @@
 			document.getElementById('P2Bairro').setAttribute('maxlength', '30');
 		}
 		if(F$.Step==2){
+		jQuery("#badgeFreteGratis").hide();
 			document.getElementById('PedidoFinalizado').style.display='block';
 			window.onscroll=null;
 			document.getElementById('idChkTagsCol2FC').style.position='relative';

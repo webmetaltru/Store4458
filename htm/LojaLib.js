@@ -7,8 +7,7 @@ ImgLoadingFC = FC$.PathImg + "loading.gif?cccfc=1";
 ImgOnError = FC$.PathImg + "nd";
 
 var sF$ = (function () {
-
-
+	
   var sCurrentPage = document.location.href.toUpperCase();
 
   function fnGetID(id) {
@@ -218,7 +217,7 @@ var sF$ = (function () {
 
   function fnUpdateCart(IsAdd, IsSpy) { FCLib$.fnAjaxExecFC("/XMLCart.asp", "IDLoja=" + FC$.IDLoja, false, fnCallbackUpdateCart, IsAdd, IsSpy); }
 
-  function fnCallbackUpdateCart(oHTTP, IsAdd, IsSpy) {
+  function fnCallbackUpdateCart(oHTTP, IsAdd, IsSpy, NameUser) {
     if (oHTTP.responseXML) {
       oXML = oHTTP.responseXML;
       var oCarts = oXML.getElementsByTagName("cart");
@@ -239,9 +238,52 @@ var sF$ = (function () {
         try { document.getElementById("idCartTotalTop").innerHTML = FCLib$.FormatPreco(currencyProdCart + " " + subtotalProdCart); } catch (e) { }
         try { document.getElementById("idCartTotalToolTop").innerHTML = FCLib$.FormatPreco(currencyProdCart + " " + subtotalProdCart); } catch (e) { }
       }
+	  
+		if(FC$.Page=="Cart"){
+			
+			var emaillogado = dataLayer["0"].email;
+			
+			if(emaillogado != undefined){
+				var cartItens = oXML.documentElement.childNodes;
+				var cartTotalPedidoItens = oXML.documentElement.childNodes[2].childNodes["0"].data;
+				
+				var sessaoUsuario = oXML.documentElement.childNodes[1].childNodes["0"].data;
+				
+				var cartItem = oXML.getElementsByTagName('item');
+				var cartItensImages = [];
+				var cartItensNomes = [];
+				var cartItensPrecos = [];
+				
+				for (var i = 0; i < cartItem.length; i++) {
+					cartItensImages.push(cartItem[i].firstChild.childNodes["0"].data);
+					cartItensNomes.push(cartItem[i].childNodes[1].childNodes["0"].data);
+					cartItensPrecos.push(cartItem[i].childNodes[3].childNodes["0"].data);
+				}
+				
+				var rd_array = [
+				{ name: 'email', value: emaillogado },
+				{ name: 'identificador', value: 'PROD_CARRINHO' },
+				{ name: 'token_rdstation', value: '85c77c0789f2ef492a80a5045bc52182' },
+				{ name: 'opportunity', value: true },
+				{ name: 'tags', value: 'Add Produtos no Carrinho' },
+				{ name: 'Prod1Img', value: cartItensImages[0] },
+				{ name: 'Prod1Nome', value: cartItensNomes[0] },
+				{ name: 'Prod1Preco', value: cartItensPrecos[0] },
+				{ name: 'Prod2Img', value: cartItensImages[1] },
+				{ name: 'Prod2Nome', value: cartItensNomes[1] },
+				{ name: 'Prod2Preco', value: cartItensPrecos[1] },
+				{ name: 'Prod3Img', value: cartItensImages[2] },
+				{ name: 'Prod3Nome', value: cartItensNomes[2] },
+				{ name: 'Prod3Preco', value: cartItensPrecos[2] },
+				{ name: 'TotalPedido', value:  cartTotalPedidoItens},
+				{ name: 'sessaoUsuario', value:  sessaoUsuario}
+				];
+				//console.log(rd_array)
+				//RdIntegration.post(rd_array, function () { console.log('ok')});
+			}
+		}
     }
   }
-
   //Histórico de navegação
   function fnLoadXMLPageHistory() { FCLib$.fnAjaxExecFC("/xmlpagehistory.asp", "idloja=" + FC$.IDLoja, false, fnCallbackLoadXMLPageHistory); }
 
@@ -366,6 +408,7 @@ var sF$ = (function () {
       document.write("<a href='javascript:MostraDisp(" + FC$.IDLoja + "," + IDProduto + ")' title='Clique aqui para ser avisado quando este produto estiver disponível'>Avise-me quando estiver disponível</a>");
     }
   }
+ 
 
   return {
     sCurrentPage: sCurrentPage,
@@ -922,7 +965,7 @@ FCLib$.onReady(function () {
     FCLib$.fnDontGo(userDontGo, {
       DontGoBtnClose: FC$.PathImg + "botdontgoclose.svg?cccfc=1", //Close button
       DontGoBanner: FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1", //Banner
-      DontGoLink: "/Custom.asp?IDLoja=4458&arq=promocao/liquidacao-mai2017.htm&utm_source=liquidacao-mai2017&utm_campaign=pop-up-saida&cupom=LIQUIDAJA70", //Link
+      DontGoLink: "/Custom.asp?IDLoja=4458&arq=promocao/liquidacao-mai2017.htm&utm_source=liquidacao-mai2017&utm_campaign=pop-up-saida&cupom=LIQUI70DESC", //Link
       DontGoAltParam: "UM DESCONTO ESPECIAL PARA VOCÊ!"
     }, //Alt Param
       "DontGoCookie"); //Cookie name
@@ -976,3 +1019,28 @@ NProgress.done();
  }
  
 // FIM - Falta R$xxx,xx para frete grátis
+
+/* Google Suggestions */
+function fnCallbackSuggestions(aTerms){
+"use strict";
+var iTerms=aTerms.length;
+if(FC$.Page=="News"){
+var sParamName="textobuscanews"
+var sIDNotFound="idNotFoundNewsFC";
+}
+else{
+var sParamName="texto"
+var sIDNotFound="idTxtCatNotFoundFC";
+}
+var oNotFound=FCLib$.GetID(sIDNotFound);
+if(oNotFound && iTerms>=1){
+if(iTerms>10)iTerms=10;
+var sTerms="<div id=GoogleTerms><ul>";
+var sPlural=(iTerms>1)?"s":"";
+sTerms+="<li><b>Busca"+ sPlural +" sugerida"+ sPlural +" pelo Google:</b></li>";
+for(var i=0;i<iTerms;i++)sTerms+="<li><a href='"+ FCLib$.fnGetSearchURL(aTerms[i],sParamName) +"'>"+aTerms[i]+"</a></li>";
+sTerms+="</ul></div>";
+oNotFound.insertAdjacentHTML('afterend',sTerms);
+}
+}
+if(FC$.query!="")FCLib$.onReady(FCLib$.fnGetSuggestions(decodeURIComponent(FC$.query),true,fnCallbackSuggestions));

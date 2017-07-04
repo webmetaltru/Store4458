@@ -25,6 +25,18 @@
     }
  }
  
+ function pathcart(){
+	var urlcarrinho = window.location.pathname;
+	if((urlcarrinho == "/addProduto.asp") || (urlcarrinho == "/AddProduto.asp") || (urlcarrinho == "/Checkout.asp") || (urlcarrinho == "/checkout.asp")){	
+		setTimeout(function(){
+			 jQuery("#badgeFreteGratis").hide();
+			 jQuery("#InfoBanners").hide();
+		}, 200);
+	}
+ }
+ pathcart();
+ 
+ 
 // FIM - Falta R$xxx,xx para frete grátis
 
 function ShowCartOnPage(e, t, o, n, i, a) {
@@ -246,13 +258,17 @@ function fnLoginShowUserName(e) {
 
 function fnProgressBarLoading() {
     NProgress.start(), window.addEventListener("load", function() {
-        NProgress.done()
+        NProgress.done();
+		var urlcarrinho = window.location.pathname;
+		if((urlcarrinho == "/addProduto.asp") || (urlcarrinho == "/AddProduto.asp") || (urlcarrinho == "/Checkout.asp") || (urlcarrinho == "/checkout.asp")){	
+			jQuery(".zopim").hide();
+		}
     })
 }
 
 function CartBtnComprar() {
     var e = jQuery("#FCCartButtons .FCCartBuy");
-    e.attr("style", "position:fixed;bottom:45px;right:0;"), jQuery("#FCCartButtons .FCCartBuy #FCCartBuyBut").html("FINALIZAR COMPRA")
+    e.attr("style", "position:fixed;bottom:45px;right:0;z-index:101"), jQuery("#FCCartButtons .FCCartBuy #FCCartBuyBut").html("FINALIZAR COMPRA");
 }
 var iQtdProds = 0,
     iItensCesta = 0,
@@ -357,6 +373,9 @@ var sF$ = function() {
         function m() {
             document.location.href = "/addproduto.asp?idloja=" + FC$.IDLoja
         }
+		
+		
+
 
         function p(e, t) {
             FCLib$.fnAjaxExecFC("/XMLCart.asp", "IDLoja=" + FC$.IDLoja, !1, C, e, t)
@@ -476,3 +495,29 @@ var sF$ = function() {
     iLastCartOnPage = 0,
     bCascate = !1;
 FCLib$.onReady(FCLib$.showPwdViewer), 0 == FC$.ClientID && FCLib$.onReady(fnShowGlobalSignin);
+
+
+/* Google Suggestions */
+function fnCallbackSuggestions(aTerms){
+"use strict";
+var iTerms=aTerms.length;
+if(FC$.Page=="News"){
+var sParamName="textobuscanews"
+var sIDNotFound="idNotFoundNewsFC";
+}
+else{
+var sParamName="texto"
+var sIDNotFound="idTxtCatNotFoundFC";
+}
+var oNotFound=FCLib$.GetID(sIDNotFound);
+if(oNotFound && iTerms>=1){
+if(iTerms>10)iTerms=10;
+var sTerms="<div id=GoogleTerms><ul>";
+var sPlural=(iTerms>1)?"s":"";
+sTerms+="<li><b>Busca"+ sPlural +" sugerida"+ sPlural +" pelo Google:</b></li>";
+for(var i=0;i<iTerms;i++)sTerms+="<li><a href='"+ FCLib$.fnGetSearchURL(aTerms[i],sParamName) +"'>"+aTerms[i]+"</a></li>";
+sTerms+="</ul></div>";
+oNotFound.insertAdjacentHTML('afterend',sTerms);
+}
+}
+if(FC$.query!="")FCLib$.onReady(FCLib$.fnGetSuggestions(decodeURIComponent(FC$.query),true,fnCallbackSuggestions));
