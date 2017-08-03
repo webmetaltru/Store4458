@@ -380,6 +380,8 @@ a #HeaderCartTotalFC{color:#06b545;position:relative;top:3px;font-size:15px;font
 .prod-price b{font-family:'Open Sans',verdana,arial;font-weight:700;}
 .prod-price b .FCPrice{font-size:26px;color: #06b545;}
 
+#OrderProd{margin:0 0 10px 0;}
+
 .text-banner{margin-bottom:10px;text-shadow:0 1px 5px <tag-FCCSSColor7>;}
 .margin-center-top{margin-top:7%;text-align:center;}
 .btn-large{padding:0.3em 0.5em;font-size:45px;}
@@ -887,9 +889,10 @@ table[name="TabEnvioInt"] td{vertical-align:middle;padding:5px 5px;}
 
 /*Badge FRETE GRÁTIS*/
 #badgeFreteGratis img.img-shipping{width:32px;}
+
 #badgeFreteGratis {
   position: fixed;
-  top: 380px;
+  top: 360px;
   z-index: 100;
   /*right: 0;*//*no lick do X enviar para -100px*/
   width: 124px;
@@ -901,6 +904,12 @@ table[name="TabEnvioInt"] td{vertical-align:middle;padding:5px 5px;}
   border-right: 0;
   padding: 5px 0 5px 12px;
   -webkit-box-shadow:0 0 1px;
+}
+@media screen and (min-width: 1024px){
+#badgeFreteGratis {
+  position: fixed;
+  top: 500px;
+}
 }
 .badgeFreteGratis-fechar, .badgeFreteGratis-fecharmbh {
 	position: absolute;
