@@ -10,7 +10,7 @@
 .no-p{padding: 0px !important;}
 .no-p-t{padding-top: 0px !important;}
 .no-p-r{padding-right: 0px !important;}
-.no-p-b{padding-bottom: 0px !important;}
+.no-p-b{padding-bottom: 0px !important;}.EstListCat ul.CatOpened > li > .PathCat0 + ul > li > .wid
 .no-p-l{padding-left: 0px !important;}
 .text-right{text-align: right;}
 .text-left{text-align: left;}
@@ -328,6 +328,13 @@ ul.menu-desktop li > ul.sub-menu-right:after{
     line-height: 12px;
 }
 
+.EstListCat ul.CatOpened > li > .PathCat0 a{
+    font-size: 13px !important;
+    font-weight: normal;
+    padding: 5px 10px;
+    /*background: #eee;*/
+}
+
 .EstListCat ul.CatOpened > li > .PathCat1 + ul > li{
     border-top: 1px solid #cccccc;
     border-bottom: 0;
@@ -370,7 +377,7 @@ background: none;
     margin-top: 10px;
 }
 .EstListCat ul.CatOpened > li > .PathCat0 + ul > li > .wid{
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .EstListCat ul.CatOpened > li a{
     font-size: 11px;
@@ -586,7 +593,7 @@ background: none;
 @media only screen and (min-width:1025px){
 /* START - BARRAESQUERDA.HTM */
 .left-bar{
-    padding: 0 8px 10px 8px !important;
+    padding: 0 6px 10px 6px !important;
 } 
 
 /* END - BARRAESQUERDA.HTM */
