@@ -241,45 +241,58 @@ var sF$ = (function () {
 	  
 		if(FC$.Page=="Cart"){
 			
+			function setCookie(cname, cvalue, exdays) {
+				var d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				var expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			
 			var emaillogado = dataLayer["0"].email;
 			
-			if(emaillogado != undefined){
-				var cartItens = oXML.documentElement.childNodes;
-				var cartTotalPedidoItens = oXML.documentElement.childNodes[2].childNodes["0"].data;
+			if(GetCookie("ProdCarrinho") == "Adicionado"){
+				console.log("no cookie")
+			}else{				
+				if(emaillogado != undefined){
 				
-				var sessaoUsuario = oXML.documentElement.childNodes[1].childNodes["0"].data;
-				
-				var cartItem = oXML.getElementsByTagName('item');
-				var cartItensImages = [];
-				var cartItensNomes = [];
-				var cartItensPrecos = [];
-				
-				for (var i = 0; i < cartItem.length; i++) {
-					cartItensImages.push(cartItem[i].firstChild.childNodes["0"].data);
-					cartItensNomes.push(cartItem[i].childNodes[1].childNodes["0"].data);
-					cartItensPrecos.push(cartItem[i].childNodes[3].childNodes["0"].data);
+					setCookie("ProdCarrinho", "Adicionado", 1);
+					
+					var cartItens = oXML.documentElement.childNodes;
+					var cartTotalPedidoItens = oXML.documentElement.childNodes[2].childNodes["0"].data;
+					
+					var sessaoUsuario = oXML.documentElement.childNodes[1].childNodes["0"].data;
+					
+					var cartItem = oXML.getElementsByTagName('item');
+					var cartItensImages = [];
+					var cartItensNomes = [];
+					var cartItensPrecos = [];
+					
+					for (var i = 0; i < cartItem.length; i++) {
+						cartItensImages.push(cartItem[i].firstChild.childNodes["0"].data);
+						cartItensNomes.push(cartItem[i].childNodes[1].childNodes["0"].data);
+						cartItensPrecos.push(cartItem[i].childNodes[3].childNodes["0"].data);
+					}
+					
+					var rd_array = [
+					{ name: 'email', value: emaillogado },
+					{ name: 'identificador', value: 'PROD_CARRINHO' },
+					{ name: 'token_rdstation', value: '85c77c0789f2ef492a80a5045bc52182' },
+					{ name: 'tags', value: "Abandonou Carrinho" },
+					{ name: 'Prod1Img', value: cartItensImages[0] },
+					{ name: 'Prod1Nome', value: cartItensNomes[0] },
+					{ name: 'Prod1Preco', value: cartItensPrecos[0] },
+					{ name: 'Prod2Img', value: cartItensImages[1] },
+					{ name: 'Prod2Nome', value: cartItensNomes[1] },
+					{ name: 'Prod2Preco', value: cartItensPrecos[1] },
+					{ name: 'Prod3Img', value: cartItensImages[2] },
+					{ name: 'Prod3Nome', value: cartItensNomes[2] },
+					{ name: 'Prod3Preco', value: cartItensPrecos[2] },
+					{ name: 'TotalPedido', value:  cartTotalPedidoItens},
+					{ name: 'sessaoUsuario', value:  sessaoUsuario}
+					];
+					//console.log(rd_array)
+					RdIntegration.post(rd_array, function () {});
 				}
-				
-				var rd_array = [
-				{ name: 'email', value: emaillogado },
-				{ name: 'identificador', value: 'PROD_CARRINHO' },
-				{ name: 'token_rdstation', value: '85c77c0789f2ef492a80a5045bc52182' },
-				{ name: 'opportunity', value: true },
-				{ name: 'tags', value: 'Add Produtos no Carrinho' },
-				{ name: 'Prod1Img', value: cartItensImages[0] },
-				{ name: 'Prod1Nome', value: cartItensNomes[0] },
-				{ name: 'Prod1Preco', value: cartItensPrecos[0] },
-				{ name: 'Prod2Img', value: cartItensImages[1] },
-				{ name: 'Prod2Nome', value: cartItensNomes[1] },
-				{ name: 'Prod2Preco', value: cartItensPrecos[1] },
-				{ name: 'Prod3Img', value: cartItensImages[2] },
-				{ name: 'Prod3Nome', value: cartItensNomes[2] },
-				{ name: 'Prod3Preco', value: cartItensPrecos[2] },
-				{ name: 'TotalPedido', value:  cartTotalPedidoItens},
-				{ name: 'sessaoUsuario', value:  sessaoUsuario}
-				];
-				//console.log(rd_array)
-				//RdIntegration.post(rd_array, function () { console.log('ok')});
 			}
 		}
     }
@@ -926,64 +939,6 @@ function fnShowGlobalSignin() {
 
 function fnLoginShowUserName(user) {
   sF$.fnLoginUserName(user.fullName, user.pictureURL);
-}
-
-// Don't Go Popup
-FCLib$.onReady(function () {
-  if (FCLib$.GetID("overlay")) {
-    //Dynamic Don't Go Container
-    var dynamicDontGoContainer = document.createElement('div');
-    dynamicDontGoContainer.id = 'ShowDontGoPopup';
-    dynamicDontGoContainer.className = 'DontGoPopup';
-    document.getElementsByTagName('body')[0].appendChild(dynamicDontGoContainer);
-
-    //Dynamic Don't Go Container Elements
-    var dynamicDontGoContainerElements = document.createElement('div');
-    dynamicDontGoContainerElements.className = 'DontGoPopupContent';
-    dynamicDontGoContainer.appendChild(dynamicDontGoContainerElements);
-
-    //Dynamic Don't Go Elements Close Button
-    var dynamicDontGoElementsCloseButton = document.createElement('div');
-    dynamicDontGoElementsCloseButton.className = 'DontGoPopupCloseButton';
-    dynamicDontGoContainerElements.appendChild(dynamicDontGoElementsCloseButton);
-    dynamicDontGoElementsCloseButton.innerHTML = "<img id='idBtnDontGoClose' border='0' onclick='sF$.fnCreateEventGA(\"DontGo\",\"Clique\",\"Close\");'>";
-
-    //Dynamic Don't Go Elements Banner
-    var dynamicDontGoElementsBanner = document.createElement('div');
-    dynamicDontGoElementsBanner.className = 'DontGoBanner';
-    dynamicDontGoContainerElements.appendChild(dynamicDontGoElementsBanner);
-    dynamicDontGoElementsBanner.innerHTML = "<a id='idLinkDontGo' target='_self'><img id='idImgDontGo' src='' border='0' onclick='sF$.fnCreateEventGA(\"DontGo\",\"Clique\",\"Banner\");'></a>";
-
-    //PreLoading Image Banner
-    var preLoadingDontGoBanner = new Image();
-    preLoadingDontGoBanner.onload = function () {
-      document.getElementById('idImgDontGo').src = preLoadingDontGoBanner.src;
-    };
-    preLoadingDontGoBanner.src = FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1";
-
-    //Show Don't Go Popup
-    FCLib$.fnDontGo(userDontGo, {
-      DontGoBtnClose: FC$.PathImg + "botdontgoclose.svg?cccfc=1", //Close button
-      DontGoBanner: FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1", //Banner
-      DontGoLink: "/Custom.asp?IDLoja=4458&arq=promocao/liquidacao-mai2017.htm&utm_source=liquidacao-mai2017&utm_campaign=pop-up-saida&cupom=LIQUI70DESC", //Link
-      DontGoAltParam: "UM DESCONTO ESPECIAL PARA VOCÊ!"
-    }, //Alt Param
-      "DontGoCookie"); //Cookie name
-  }
-});
-
-function userDontGo(oParam) {
-  var OpenDontGoPopup = document.getElementById('ShowDontGoPopup');
-  if (OpenDontGoPopup) {
-    document.getElementById("idBtnDontGoClose").src = oParam.DontGoBtnClose; //Close button
-    document.getElementById("idImgDontGo").src = oParam.DontGoBanner; //Banner
-    document.getElementById("idImgDontGo").alt = oParam.DontGoAltParam; //Alt Param
-    document.getElementById("idLinkDontGo").href = oParam.DontGoLink; //Link
-    sF$.fnCreateEventGA("DontGo", "Open", "Window");
-    window.onload = OpenDontGoPopup.style.display = "block";
-    var CloseDontGoPopup = document.getElementsByClassName("DontGoPopupCloseButton")[0];
-    CloseDontGoPopup.onclick = function () { OpenDontGoPopup.style.display = "none"; }
-  }
 }
 
 /* Progress Bar */
