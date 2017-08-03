@@ -375,6 +375,64 @@ var sF$ = function() {
         }
 		
 		
+// Don't Go Popup
+FCLib$.onReady(function () {
+  if (FCLib$.GetID("overlay")) {
+    //Dynamic Don't Go Container
+    var dynamicDontGoContainer = document.createElement('div');
+    dynamicDontGoContainer.id = 'ShowDontGoPopup';
+    dynamicDontGoContainer.className = 'DontGoPopup';
+    document.getElementsByTagName('body')[0].appendChild(dynamicDontGoContainer);
+
+    //Dynamic Don't Go Container Elements
+    var dynamicDontGoContainerElements = document.createElement('div');
+    dynamicDontGoContainerElements.className = 'DontGoPopupContent';
+    dynamicDontGoContainer.appendChild(dynamicDontGoContainerElements);
+
+    //Dynamic Don't Go Elements Close Button
+    var dynamicDontGoElementsCloseButton = document.createElement('div');
+    dynamicDontGoElementsCloseButton.className = 'DontGoPopupCloseButton';
+    dynamicDontGoContainerElements.appendChild(dynamicDontGoElementsCloseButton);
+    dynamicDontGoElementsCloseButton.innerHTML = "<img id='idBtnDontGoClose' border='0' onclick='sF$.fnCreateEventGA(\"DontGo\",\"Clique\",\"Close\");'>";
+
+    //Dynamic Don't Go Elements Banner
+    var dynamicDontGoElementsBanner = document.createElement('div');
+    dynamicDontGoElementsBanner.className = 'DontGoBanner';
+    dynamicDontGoContainerElements.appendChild(dynamicDontGoElementsBanner);
+    dynamicDontGoElementsBanner.innerHTML = "<a id='idLinkDontGo' target='_self'><img id='idImgDontGo' src='' border='0' onclick='sF$.fnCreateEventGA(\"DontGo\",\"Clique\",\"Banner\");'></a>";
+
+    //PreLoading Image Banner
+    var preLoadingDontGoBanner = new Image();
+    preLoadingDontGoBanner.onload = function () {
+      document.getElementById('idImgDontGo').src = preLoadingDontGoBanner.src;
+    };
+    preLoadingDontGoBanner.src = FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1";
+
+    //Show Don't Go Popup
+    FCLib$.fnDontGo(userDontGo, {
+      DontGoBtnClose: FC$.PathImg + "botdontgoclose.svg?cccfc=1", //Close button
+      DontGoBanner: FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1", //Banner
+      DontGoLink: "https://www.aramado.com/Custom.asp?IDLoja=4458&arq=promocao/top-casa-organizada&utm_campaign=pop-up-saida&cupom=CASAORGANIZADA17", //Link
+      DontGoAltParam: "UM DESCONTO ESPECIAL PARA VOCÊ!"
+    }, //Alt Param
+      "DontGoCookie"); //Cookie name
+  }
+});
+
+function userDontGo(oParam) {
+  var OpenDontGoPopup = document.getElementById('ShowDontGoPopup');
+  if (OpenDontGoPopup) {
+    document.getElementById("idBtnDontGoClose").src = oParam.DontGoBtnClose; //Close button
+    document.getElementById("idImgDontGo").src = oParam.DontGoBanner; //Banner
+    document.getElementById("idImgDontGo").alt = oParam.DontGoAltParam; //Alt Param
+    document.getElementById("idLinkDontGo").href = oParam.DontGoLink; //Link
+    sF$.fnCreateEventGA("DontGo", "Open", "Window");
+    window.onload = OpenDontGoPopup.style.display = "block";
+    var CloseDontGoPopup = document.getElementsByClassName("DontGoPopupCloseButton")[0];
+    CloseDontGoPopup.onclick = function () { OpenDontGoPopup.style.display = "none"; }
+  }
+}
+
 
 
         function p(e, t) {
