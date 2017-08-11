@@ -107,19 +107,19 @@ input[type="text"],input[type="number"]{padding:5px;background-image:none;color:
 /* Filters */
 #ContentFil{border:1px solid <tag-FCCSSColor2>;width:190px;border-radius:4px;background:<tag-FCCSSColor1>;margin-bottom:20px;padding-bottom:15px;}
 #ContentFil .DivFiltrandoPor{padding:10px 0 0 10px;}
-#ContentFil .DivFiltrandoPor .Label{font-weight:bold;font-family:arial;font-size:13px;background:<tag-FCCSSMainColor>;width:90%;display:block;padding:5px 0 5px 5px;color:<tag-FCCSSColor1>;border-radius:3px;}
-#ContentFil .DivFiltrarPor{padding:25px 0 0 10px;}
-#ContentFil .DivFiltrarPor .Label{font-weight:bold;font-family:arial;font-size:13px;background:<tag-FCCSSMainColor>;width:90%;display:block;padding:5px 0 5px 5px;color:<tag-FCCSSColor1>;border-radius:3px;}
+#ContentFil .DivFiltrandoPor .Label{font-size:12px;width:100%;display:block;padding:0px;}
+#ContentFil .DivFiltrarPor{padding:0;}
+#ContentFil .DivFiltrarPor .Label{font-size:12px;width:100%;display:block;padding:0;}
 #ContentFil .FilSearch{padding:5px 0 0 5px;margin:0;list-style-type:none;}
-#ContentFil .FilSearch .FilName{margin:20px 0 5px 0;font-weight:bold;font-family:arial;font-size:12px;cursor:pointer;}
+#ContentFil .FilSearch .FilName{margin:0;font-weight:bold;font-family:arial;font-size:12px;cursor:pointer;}
 #ContentFil .FilSearch .FilName img{padding:0 4px 0 0;cursor:pointer;width:16px;height:16px;}
-#ContentFil .FilItems .FilItemsList{width:150px;padding:0;margin:0;list-style-type:none;max-height: 97px;overflow-x: auto;overflow-y: auto;}
+#ContentFil .FilItems .FilItemsList{width:150px;padding:0;margin:0;list-style-type:none;max-height: 200px;overflow-x: auto;overflow-y: auto;}
 #ContentFil .FilItems .FilItemsList::-webkit-scrollbar{-webkit-appearance:none;width:7px;}
 #ContentFil .FilItems .FilItemsList::-webkit-scrollbar-thumb{border-radius:4px;background-color:#666;-webkit-box-shadow:0 0 1px;}
 #ContentFil .FilSearch .SearchFil{margin:3px 0 10px 0;border: 1px solid <tag-FCCSSColor2>;width:150px;height:22px;font-size:11px;padding:0 0 0 5px;}
 #ContentFil #idFilSearchTextInputFC{border: 1px solid <tag-FCCSSColor2>;width:120px;height:22px;font-size:11px;}
 #ContentFil .FilItems .FilItemsList li{line-height:16px;}
-#ContentFil .FilItems .FilItemsList label{font-size:11px;cursor:pointer;}
+#ContentFil .FilItems .FilItemsList label{font-size:12px;cursor:pointer;}
 #ContentFil .FilItems .FilItemsList li input[type=checkbox]{margin:4px 5px 2px 0;cursor:pointer;}
 #ContentFil .FilItems .FilItemsList li input[type=radio]{margin:4px 5px 2px 0;cursor:pointer;}
 #ContentFil .FilItems .FilItemsList .ColorSearch{color:#64AED9;}
@@ -128,8 +128,8 @@ input[type="text"],input[type="number"]{padding:5px;background-image:none;color:
 #ContentFil .ImageFil{margin:0 3px 0 0;width:16px;height:16px;border-radius:8px;line-height:8px;display:inline-block;vertical-align:bottom;border:1px solid <tag-FCCSSColor3>;}
 #ContentFil .ColorFil{margin:0 3px 0 0;width:16px;height:16px;border-radius:8px;line-height:8px;display:inline-block;vertical-align:bottom;border:1px solid <tag-FCCSSColor3>;}
 #ContentFil .FilNotFound{font-size:11px;}
-#ContentFil .FiltrandoPor{padding:5px 0 15px 5px;margin:0;list-style-type:none}
-#ContentFil .FiltrandoPor li{margin-top:10px;font-size:11px;}
+#ContentFil .FiltrandoPor{padding:0;margin:0;list-style-type:none}
+#ContentFil .FiltrandoPor li{margin-top:4px;font-size:12px;}
 #ContentFil .FiltrandoPor img{width:10px;cursor:pointer;margin-left:3px;}
 #ContentFil .FilRemoveFilters{margin-top:15px;}
 #ContentFil .FilRemoveFilters a{background-color:<tag-FCCSSColor3>;color:<tag-FCCSSColor4>;border-radius:3px;font-weight:bold;font-size:11px;padding:4px 10px 4px 10px;text-decoration:none;}
@@ -382,6 +382,11 @@ a #HeaderCartTotalFC{color:#06b545;position:relative;top:3px;font-size:15px;font
 
 #OrderProd{margin:0 0 10px 0;}
 
+@media screen and (max-width: 768px){#OrderProd{margin:0;width:100%;}#idFoundFC{padding:0 0 10px 0 !important;font-size:12px;}#idPageCountFC{padding:0 !important;font-size:12px;}
+  									 #idHeadFilters{border-radius: 0!important;border: 0!important;background: #eee!important;}#idShowFilters button{background-color: #999;}
+									 #ContentFil .DivFiltrandoPor .Label{background: #fff!important;color:#333!important}#ContentFil .DivFiltrandoPor{padding:0 !important;}
+									 #idDivPagProd, #idDivOrder, #idDivPath, #idDivSearch{margin:0 !important;}}
+
 .text-banner{margin-bottom:10px;text-shadow:0 1px 5px <tag-FCCSSColor7>;}
 .margin-center-top{margin-top:7%;text-align:center;}
 .btn-large{padding:0.3em 0.5em;font-size:45px;}
@@ -399,7 +404,7 @@ a #HeaderCartTotalFC{color:#06b545;position:relative;top:3px;font-size:15px;font
 .TitTabParc{font-weight:bold;font-size:8pt;font-family:tahoma,arial;}
 .EstParcPar{font-size:8pt;font-family:tahoma,verdana;background:<tag-FCCSSColor19>;}
 .EstParcImpar{font-size:8pt;font-family:tahoma,verdana;background:<tag-FCCSSColor8>;}
-#idDivPagProd, #idDivOrder, #idDivPath, #idDivSearch{margin:15px 0;width:100%;border-style:solid;border-width:1px;border-color:<tag-FCCSSColor8>;}
+#idDivPagProd, #idDivOrder, #idDivPath, #idDivSearch{margin:15px 0;width:100%;border-style:solid;border-width:0px;border-color:<tag-FCCSSColor8>;}
 #PriceAVista{font-size:0.8em;line-height:20px;padding:10px 0px 10px 5px;font-family:'Open Sans',verdana,arial;font-weight:400;margin:10px 0;background-color:<tag-FCCSSColor19>;}
 .PriceAVistaProdLista{font-size:0.8em;position:relative;top:-20px;font-family:'Open Sans',verdana,arial;font-weight:400;}
 .ListProdNomeProd{color:<tag-FCCSSMainColor>;}
@@ -892,7 +897,7 @@ table[name="TabEnvioInt"] td{vertical-align:middle;padding:5px 5px;}
 
 #badgeFreteGratis {
   position: fixed;
-  top: 360px;
+  top: 300px;
   z-index: 100;
   /*right: 0;*//*no lick do X enviar para -100px*/
   width: 124px;
@@ -908,7 +913,7 @@ table[name="TabEnvioInt"] td{vertical-align:middle;padding:5px 5px;}
 @media screen and (min-width: 1024px){
 #badgeFreteGratis {
   position: fixed;
-  top: 500px;
+  top: 480px;
 }
 }
 .badgeFreteGratis-fechar, .badgeFreteGratis-fecharmbh {
