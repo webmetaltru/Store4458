@@ -10,7 +10,7 @@
 .no-p{padding: 0px !important;}
 .no-p-t{padding-top: 0px !important;}
 .no-p-r{padding-right: 0px !important;}
-.no-p-b{padding-bottom: 0px !important;}.EstListCat ul.CatOpened > li > .PathCat0 + ul > li > .wid
+.no-p-b{padding-bottom: 0px !important;}
 .no-p-l{padding-left: 0px !important;}
 .text-right{text-align: right;}
 .text-left{text-align: left;}
@@ -204,30 +204,30 @@ ul.menu-desktop li.menu-liquidacao a h5{
 	font-weight: 100 !important;
 }
 ul.menu-desktop li.menu-liquidacao a h3{
-	background: #de141d;
-	color: #ffec00;
+	background: #ca0a8d;
+	color: #f5ca20;
 	font-size: 14px !important;
 	line-height: 18px !important;
 	margin: -2px 0 0 0;
 	font-weight: 700 !important;
 }
 ul.menu-desktop li.menu-liquidacao a h4{
-	background: #ffec00;
-	color: #de141d;
+	background: #f5ca20;
+	color: #ca0a8d;
 	font-size: 26px !important;
     font-weight: 700 !important;
     line-height: 24px !important;
 }
 ul.menu-desktop li.menu-liquidacao a h5{
-	background: #ffec00;
-	color: #de141d;
+	background: #f5ca20;
+	color: #7b650b;
 }
 
 ul.menu-desktop li.menu-liquidacao a:hover h3,
 ul.menu-desktop li.menu-liquidacao a:hover h4,
 ul.menu-desktop li.menu-liquidacao a:hover h5{
-	background: #de141d;
-	color: #ffec00;
+	background: #ca0a8d;
+	color: #f5ca20;
 }
 
 /* START - MENU DESKTOP - SUBMENU */
@@ -331,7 +331,7 @@ ul.menu-desktop li > ul.sub-menu-right:after{
 .EstListCat ul.CatOpened > li > .PathCat0 a{
     font-size: 13px !important;
     font-weight: normal;
-    padding: 5px 10px;
+    padding: 5px 0px;
     /*background: #eee;*/
 }
 
@@ -377,7 +377,7 @@ background: none;
     margin-top: 10px;
 }
 .EstListCat ul.CatOpened > li > .PathCat0 + ul > li > .wid{
-    margin-right: 5px;
+    margin-right: 0px;
 }
 .EstListCat ul.CatOpened > li a{
     font-size: 11px;
