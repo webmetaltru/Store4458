@@ -19,8 +19,8 @@
           <NomeProd>
         </h3>
       </div>
-      <div class="PrecoProduto" style="white-space:nowrap;">
-        <div id="idProdPrice<IDProduto>" class="prices">a partir <PrecoSimples></div>
+      <div class="PrecoProduto">
+        <div id="idProdPrice<IDProduto>" class="prices" style="white-space:nowrap;">a partir <PrecoSimples></div>
         <div class="installments"><script>MostraMaxParcela(<PrecoNum>,<MaxParcelasProdNum>);</script></div>
       </div>
       <div class="ProdRating">
@@ -44,8 +44,8 @@
       <div class="DivHomeNomeProd">
         <span class="HomeNomeProd text-overflow font-16"><NomeProd></span>
       </div>
-      <div class="DivHomePriceProd" style="white-space:nowrap;">
-        <div id="idProdPrice<IDProduto>"><script>sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>',<MaxParcelasProdNum>,<IDProduto>);</script></div>
+      <div class="DivHomePriceProd">
+        <div id="idProdPrice<IDProduto>" style="white-space:nowrap;"><script>sF$.fnShowPrice(<PrecoNum>,<PrecoOri>,'<CodProd>',<MaxParcelasProdNum>,<IDProduto>);</script></div>
         <div class="PriceAVistaLista"><script>sF$.fnShowParcels(<PrecoNum>,<MaxParcelasProdNum>);</script><br><script>sF$.fnMostraDescontoHome(<PrecoNum>);</script></div>
       </div>
       <div class="DivHomeSpy hide-small"><a href="#Spy" onclick='bCascate=true;FCLib$.OpenRWD("/listaprodutos.asp?idloja=<IDLoja>&sty=9&int=1&idproduto=<IDProduto>","Disp","width=700,height=700")'>Espiar</a></div>
