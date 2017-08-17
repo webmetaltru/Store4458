@@ -22,6 +22,18 @@
 if(FC$.Page=="Checkout"){
   FCLib$.loadAsyncCSS('<PathTo file="htm/checkout.css">');
 }
+  function detmobile(){
+    setTimeout(function(){
+      jQuery('#badgeFreteGratis').hide();
+    }, 100);
+    console.log('ok mobile');
+    setTimeout(function(){
+      jQuery('#InfoBanners').hide();
+      jQuery('.footer-produtos').hide();
+    }, 1000);
+  }
+   detmobile();
+  
 </script>
 <!-- Badge FRETE GRÁTIS -->
 <div id="badgeFreteGratis" class="actualElement ie10up">
@@ -33,7 +45,7 @@ if(FC$.Page=="Checkout"){
     para ganhar<br>
     <a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><img src="<BASELOJA>images/frete-gratis.gif" border="0"></a>
 	p/ Sul e Sudeste.
-	<a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><b>*Veja sua região</b></a>
+	<a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><b>*Veja sua regi�o</b></a>
   </div>
 </div>
 
