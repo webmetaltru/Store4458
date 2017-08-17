@@ -1013,7 +1013,7 @@ FCLib$.onReady(function () {
     FCLib$.fnDontGo(userDontGo, {
       DontGoBtnClose: FC$.PathImg + "botdontgoclose.svg?cccfc=1", //Close button
       DontGoBanner: FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1", //Banner
-      DontGoLink: "/Custom.asp?IDLoja=4458&arq=promocao/top-casa-organizada&cupom=CASAORGANIZADA17", //Link
+      DontGoLink: "/Custom.asp?IDLoja=4458&arq=promocao/mega-saldao&utm_source=mega-saldao&utm_medium=pop-up&utm_campaign=pop-up-saida&cupom=DESCONTOMEGA5", //Link
       DontGoAltParam: "UM DESCONTO ESPECIAL PARA VOCÊ!"
     }, //Alt Param
       "DontGoCookie"); //Cookie name
