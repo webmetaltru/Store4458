@@ -49,7 +49,8 @@ var sF$ = (function () {
     }
   }
   
-
+  
+  
   var iPL = 0;
 
   function fnShowPrice(Price, OriginalPrice, Cod, iMaxParcels, ProductID) {
@@ -314,7 +315,7 @@ var sF$ = (function () {
       var sPageHistory = "";
       try { var sBar = (oHistoryPages[0].getElementsByTagName("title")[0].childNodes[0].nodeValue); }
       catch (e) { var sBar = ""; }
-      if (sBar != "") { sPageHistory += "<div class='FooterSepFC col-xlarge-12'><img src='" + FC$.PathImg + "footersep.png?cccfc=1'></div><div id='idDivPageHistory'><div id='idPageHistoryFC'><div id='idTitPageHistory'>Páginas Visitadas:</div><ul id='idListPageHistoryFC'>"; }
+      if (sBar != "") { sPageHistory += "<div class='FooterSepFC col-xlarge-12'><img src='" + FC$.PathImg + "footersep.png?cccfc=1'></div><div id='idDivPageHistory'><div id='idPageHistoryFC'><div id='idTitPageHistory'>Produtos que você viu:</div><ul id='idListPageHistoryFC'>"; }
       for (i = 0; i < oHistoryPages.length; i++) {
         sTitleProd = oHistoryPages[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
         sLinkProd = oHistoryPages[i].getElementsByTagName("link")[0].childNodes[0].nodeValue;
@@ -974,6 +975,14 @@ NProgress.done();
  }
  
 // FIM - Falta R$xxx,xx para frete grátis
+
+
+FCLib$.onReady(function () {
+  jQuery(".FCCart .FCCartRightCol .FCCartBuy #FCCartRightBuyBut").html("FINALIZAR MEU PEDIDO");
+  jQuery("#FCCartButtons .FCCartStillShopping #FCCartStillShoppingBut").html("COMPRAR + PRODUTOS");
+  
+  jQuery(".FCCartBuy").append("<ul class=\"FooterULSecurityFC info-segunranca\" style=\"margin: 20px auto 0px auto;text-align: center;\"><li style=\"margin-right:6px;\"><img height=\"50\" alt=\"Seu pedido com Segurança\" title=\"Site Seguro\" src=\"/images/100_https.svg?cccfc=1\" style=\"opacity: 1;\"></li><li style=\"margin-right:6px;\"><img height=\"50\" alt=\"Seu pedido com Segurança\" title=\"Site Seguro\" src=\"/images/Google_Loja_Segura.svg?cccfc=1\" style=\"opacity: 1;\"></li><li><img height=\"50\" alt=\"Seu pedido com Segurança\" title=\"Site Seguro\" src=\"/images/LetsEncrypt.svg?cccfc=1\" style=\"opacity: 1;\"></li></ul>");
+});
 
 
 // Don't Go Popup
