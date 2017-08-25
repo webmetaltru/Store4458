@@ -100,7 +100,7 @@ input[type="text"],input[type="number"]{padding:5px;background-image:none;color:
 /*  Redir Pagamentos */
 #idTabRedirPagtoFC{background:#dedede;padding:1px;margin:0}
 #idTabRedirPagtoFC .EstTabTopo{padding:2px 2px 2px 2px;background:#f0f0f0;color:#0e3657;font-size:11pt;font-family:tahoma;line-height:40px;}
-#idTabRedirPagtoFC .EstTabQuadro{background:#ffffff;font-size:8pt;font-family:arial}
+#idTabRedirPagtoFC .EstTabQuadro{font-size:8pt;font-family:arial}
 #idTabRedirPagtoFC .InputButton{background-color:#6ea853;color:#fcfcfc;font-weight:bold;font-size:12px;font-family:tahoma,arial;height:40px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
 #idTabRedirPagtoFC .InputButton:hover{background-color:#4c7738;border-radius:5px;color:#FCFCFC;font-family:tahoma,arial;font-size:12px;font-weight:bold;height:40px;cursor:pointer;}
 
@@ -213,7 +213,7 @@ input[type="text"],input[type="number"]{padding:5px;background-image:none;color:
 #idTableCPFFC #idTxtCPFFC{display: none;}
 
 /* Style para a tabela de Busca R?pida, para tabela de Ajuda (Pagamentos) e Fale Conosco */
-.EstTabQuadro{font-size:8pt;background:#FFFFFF;}
+.EstTabQuadro{font-size:8pt;}
 
 /* Style dos campos do formul?rio clientes,fale conosco,... */
 .EstNomeCampo{font-size:8pt;font-weight:bold;color:#000000;}
@@ -652,6 +652,8 @@ table[name="TabEnvioInt"] td{vertical-align:middle;padding:5px 5px;}
 .InfoBanners{margin-top:45px !important;}
 #idTDFreightSimulationFC .EstTabPedido td{padding:12px 5px 0 0;vertical-align:middle;}
 #idTDFreightSimulationFC #idBut{border-radius:3px;-webkit-border-radius:3px;-moz-border-border-radius:3px;border:none;padding:6px 5px;cursor:pointer;background-color:#33a1ff;color:#FFFFFF;}
+#idTDFreightSimulationFC .ZipName{font-size: 16px;}
+#idTDFreightSimulationFC .ZipValue {font-size: 16px;color: #4CAF50;}
 
 /* Checkout passo a passo */
 .FCPayment #TabRadio .EstTabPedidoTit{font-size:18px;font-family:'Open Sans',verdana,arial;font-weight:400;}
