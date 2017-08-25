@@ -102,7 +102,7 @@ FCLib$.onReady(function(){updateHeaderFreight()});
                     }
                 }]
             })
-        }, 100), CartBtnComprar()
+        }, 100)
     }), sF$.fnLogout(), fnShowYear(), FCLib$.ShowBadgeFC();
     var o = document.querySelector(".ProductList");
     "Products" == FC$.Page && o && document.querySelector("#idFCContent").setAttribute("class", "col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12"), FCLib$.onReady(FCLib$.execWaveInterchange)
@@ -175,7 +175,8 @@ function fnShowCEPGrid(e) {
         var t = fnGetCookie("CEP" + FC$.IDLoja);
         null == t && (t = "");
         var o = "<div id='idDivCEPFC'>";
-        o += "  <div id='idDivTitCEP'><img src='" + FC$.PathImg + "iconziptruck.svg?cccfc=1' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>", o += "  <div id='idDivContentCEP'>", o += "<div class='info-frete'>Prazo de separação do seu pedido é de até 3 dias úteis. Confira o prazo dos Correios (dias úteis):</div>", o += "    <div id='idDivContentFieldsCEP'>", o += "      <div id='idDivCEPCalc'>", o += "        <div class='FieldCEP FieldCEPQty'><label>Qtd.</label><input type='number' id='idQtdZip" + e + "' value='1' maxlength='4'></div>", o += "        <div class='FieldCEP FieldCEPNum'><input type='text' placeholder='CEP' id='idZip" + e + "' value='" + t + "' maxlength='8' onkeyup='this.value=this.value.replace(/[^\\d]+/g,\"\");if(this.value.length >= 8)document.getElementById(\"idCEPButton\").click()'></div>", o += "        <img src='" + FC$.PathImg + "iconnewsletter.svg?cccfc=1' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProdGrid(" + e + ")'>", o += "      </div>", o += "    </div>", o += "    <div id='idDivImgLoadingCEPFC'><img src='" + FC$.PathImg + "loadingcep.gif?cccfc=1' vspace=3 style='display:none;' id=ImgLoadingCEP></div>", o += "    <div id='idShippingValues" + e + "'></div></div>", o += "  </div>", o += "</div>";
+        o += "  <div id='idDivTitCEP'><img src='" + FC$.PathImg + "iconziptruck.svg?cccfc=1' width='25' height='25' alt='Zip box' /><span>Simule o valor do frete</span></div>", o += "  <div id='idDivContentCEP'>", o += "<div class='info-frete'>Prazo de separação do seu pedido é de até 3 dias úteis. Confira o prazo dos Correios (dias úteis):</div>", o += "    <div id='idDivContentFieldsCEP'>", o += "      <div id='idDivCEPCalc'>", o += "        <div class='FieldCEP FieldCEPQty'><label>Qtd.</label><input type='number' id='idQtdZip" + e + "' value='1' maxlength='4'></div>", o += "        <div class='FieldCEP FieldCEPNum'><input type='text' placeholder='CEP' id='idZip" + e + "' value='" + t + "' maxlength='8' onkeyup='this.value=this.value.replace(/[^\\d]+/g,\"\");if(this.value.length >= 8)document.getElementById(\"idCEPButton\").click()'></div>", o += "        <img src='" + FC$.PathImg + "iconnewsletter.svg?cccfc=1' height='29px' id='idCEPButton' class='FieldCEPBtn' onclick='fnGetShippingValuesProdGrid(" + e + ")'>", o += "      </div>", o += "    </div>", o += "    <div id='idDivImgLoadingCEPFC'><img src='" + FC$.PathImg + "loadingcep.gif?cccfc=1' vspace=3 style='display:none;' id=ImgLoadingCEP></div>", o += "    <div id='idShippingValues" + e + "'></div></div>", o += "  </div>", o += "<div class='info-frete'>Atenção: Verifique se o seu CEP possui restrição de Entrega via Correios <a href='http://www2.correios.com.br/sistemas/precosPrazos/restricaoentrega/' target='_blank'>clique aqui</a>. Se tiver , a entrega será efetuada na agência descrita no rastreio. (CEP Origem: 18540-000)</div>", o += "</div>";
+      
         var n = document.getElementById("ShowCEP" + e);
         n && (n.innerHTML = o)
     }
@@ -208,7 +209,7 @@ function processXMLCEPGrid(e, t) {
                 d = (ReadXMLNode(e, "Opt" + s + "Image"), ReadXMLNode(e, "Opt" + s + "Obs"));
             null == d && (d = "");
             var l = ReadXMLNode(e, "Opt" + s + "Value");
-            l == FC$.Currency + " 0,00" && (l = "FRETE GRï¿½TIS"), o += "<div class='ZipOption'>", o += "  <div class='ZipNameObs'>", o += "    <div class='ZipName'>" + c + "</div>", o += "    <div class='ZipObsVal'>" + d + "</div>", o += "  </div>", o += "  <div class='ZipValue'>" + l + "</div>", o += "</div>"
+            l == FC$.Currency + " 0,00" && (l = "FRETE GRÁTIS"), o += "<div class='ZipOption'>", o += "  <div class='ZipNameObs'>", o += "    <div class='ZipName'>" + c + "</div>", o += "    <div class='ZipObsVal'>" + d + "</div>", o += "  </div>", o += "  <div class='ZipValue'>" + l + "</div>", o += "</div>"
         }
         n.innerHTML = o, n.style.display = "block", o += "</div>", document.getElementById("ImgLoadingCEP").style.display = "none"
     }
@@ -266,10 +267,15 @@ function fnProgressBarLoading() {
     })
 }
 
-function CartBtnComprar() {
-    var e = jQuery("#FCCartButtons .FCCartBuy");
-    e.attr("style", "position:fixed;bottom:45px;right:0;z-index:101"), jQuery("#FCCartButtons .FCCartBuy #FCCartBuyBut").html("FINALIZAR COMPRA");
-}
+
+FCLib$.onReady(function () {
+  jQuery("#FCCartButtons .FCCartBuy #FCCartBuyBut").html("FINALIZAR MEU PEDIDO");
+  jQuery("#FCCartButtons .FCCartStillShopping #FCCartStillShoppingBut").html("COMPRAR + PRODUTOS");
+  
+  jQuery(".FCCartBuy").append("<ul class=\"FooterULSecurityFC info-segunranca\" style=\"margin: 20px auto 0px auto;text-align: center;\"><li style=\"clear: none;margin: 0;float: none;\"><img height=\"50\" alt=\"Seu pedido com Segurança\" title=\"Site Seguro\" src=\"/images/100_https.svg?cccfc=1\" style=\"opacity: 1;\"></li><li style=\"clear: none;margin: 0;float: none;\"><img height=\"50\" alt=\"Seu pedido com Segurança\" title=\"Site Seguro\" src=\"/images/Google_Loja_Segura.svg?cccfc=1\" style=\"opacity: 1;\"></li><li style=\"clear: none;margin: 0;float: none;\"><img height=\"50\" alt=\"Seu pedido com Segurança\" title=\"Site Seguro\" src=\"/images/LetsEncrypt.svg?cccfc=1\" style=\"opacity: 1;\"></li></ul>");
+});
+
+
 var iQtdProds = 0,
     iItensCesta = 0,
     iDescontoAvista = 0;
