@@ -328,7 +328,7 @@ var FCGrid$ = function () {
         if(iEstoqueDetail === 0){sEstoqueDetailOut= "indisponível";}
         else if(fPriceDetails === 0){sEstoqueDetailOut= "sob consulta"}
         else {sEstoqueDetailOut=iEstoqueDetail}
-			return iEstoqueDetail == 0 ? "" : iEstoqueDetail < 10 ? "-<span class=\"AdicNome\" style=\"color:#ff7007\"><b>Está acabando!</b> Apenas: <b>"+ sEstoqueDetailOut + " </b>peça(s)</span>" : "";
+			return iEstoqueDetail == 0 ? "" : iEstoqueDetail < 10 ? "-<span class=\"AdicNome\" style=\"color:#ff7007\"><b>Está acabando!</b> Apenas: <b>"+ sEstoqueDetailOut + " </b>unidade(s)</span>" : "";
     },
 
     getDetailsProduct: function(){
