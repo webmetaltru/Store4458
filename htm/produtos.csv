@@ -1,0 +1,28 @@
+Comando,NomeCat,IDProduto,CodProd,NomeProd,Peso,Descricao,DescrLonga,DescrURL,URLTarget,Estoque,EstoqueMinimo,Disponivel,ICMS,Custo,Preco,PrecoProm,PrecoB2B,PrecoB2BProm,DataPromInicio,DataPromFim,Lancamento,EmDestaque,ImagemProd,ImagemDet,ImagemAmp,Adicional1,Adicional2,Adicional3,AdicionalD1,AdicionalD2,AdicionalD3,Cores,OrdemProd,IDProdutoPai,RamoProd,MaisProd,DataVencimento,DiasAvisoVencimento,DiasReposicao,IDParceiroProd,DescrHTM,MetaKeywordsProd,MaxParcelasProd,XMLParcelasProd,CodBarrasProd,Embalavel,IsProdutoGrande,LarguraProd,AlturaProd,ProfundidadeProd,CodVideo,ProdMPN,TitleProd,URLProd,VendaConjunta,MetaDescriptionProd,IDsFiltroItem
+"A","Kits Quarto",5695324,"6010191-1","",4.126,"KIT 1 para Quarto ou Closet (5 Produtos) Branco","","",False,999,5,True,0,0,297.85,259,0,0,03/01/2017,01/01/2049,True,True,"6010191_1a.jpg","6010191_1a.jpg","6010191_1a.jpg","","","","","","","7250",0,5695295,0,"",,0,0,,"","",0,0,"",True,False,0,0,0,"","A","","kit-1-para-quarto-ou-closet-14-produtos-","","",""
+"A","Kits Quarto",5695325,"6010192-1","",5.92,"KIT 2 para Quarto ou Closet (6 Produtos) Branco","Este Kit contém os seguintes produtos:
+1 - Sapateira de Porta (6010190) - Branco
+1 - Guarda Tudo - 3X1 (12190) - Branco
+1 - Gancho Decorativo Médio (601201) - Branco
+1 - Organizador de maquiagem grande (1559) - Transparente
+1 - Organizador de bijuterias redondo (1557) - Transparente
+1 - Organizador de esmalte (1556) - Transparente
+
+6 Itens no total.","",False,1000,5,True,0,0,366.85,319,0,0,03/01/2017,01/01/2049,True,True,"6010192_1b.JPG","6010192_1b.JPG","","","","","","","","7250",0,5695296,0,"",,0,0,,"","",0,0,"",True,False,0,0,0,"","A","","kit-2-para-quarto-ou-closet-6-produtos-","","",""
+"A","Kits Quarto",5695295,"6010191","KIT 1 para Quarto ou Closet (14 Produtos)",4.126,"KIT 1 para Quarto ou Closet (5 Produtos)","Este Kit contém os seguintes produtos:
+1 - Gancho Alpha (6012264-2/31) - Preto/Lanarca
+1 - Arara (1425) - Branco
+1 - Combo Sapateira Expansível (10188) - (2 sapateiras para até 6 pares cada. Sapateira Empilhavel) - Branco
+10 - Cabide com Alça (1074) (10 unidades de cabide) - Branco
+1 - Cabide Gravata e Cintos (1077) - Branco
+
+14 itens no total.","",False,1000,5,True,0,0,297.85,259,0,0,03/01/2017,01/01/2049,True,True,"6010191a.jpg","6010191a.jpg","","","","","","","","7250",0,,727,"",,0,0,,"","",0,0,"",True,False,0,0,0,"","A","","kit-1-para-quarto-ou-closet-14-produtos-","","",""
+"A","Kits Quarto",5695296,"6010192","KIT 2 para Quarto ou Closet (6 Produtos)",5.92,"KIT 2 para Quarto ou Closet (6 Produtos)","Este Kit contém os seguintes produtos:
+1 - Sapateira de Porta (6010190) - Branco
+1 - Guarda Tudo - 3X1 (12190) - Branco
+1 - Gancho Decorativo Médio (601201) - Branco
+1 - Organizador de maquiagem grande (1559) - Transparente
+1 - Organizador de bijuterias redondo (1557) - Transparente
+1 - Organizador de esmalte (1556) - Transparente
+
+6 Itens no total.","",False,1000,5,True,0,0,366.85,319,0,0,03/01/2017,01/01/2049,True,True,"6010192a.JPG","6010192a.JPG","","","","","","","","7250",0,,727,"",,0,0,,"","",0,0,"",True,False,0,0,0,"L6W74-Brl5A","A","","kit-2-para-quarto-ou-closet-6-produtos-","","",""
