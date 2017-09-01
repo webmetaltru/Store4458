@@ -51,6 +51,17 @@
     .MainContainer{width: 1008px;}
 }
 
+/* START - PAG PRODUTO */
+@media only screen and (min-width: 1024px){
+    .FCBtnComprarGrid {width:100%;max-width:250px;padding: 10px 10px 12px 10px !important;background: #06b545;margin: 0;color: #fff;font-size: 22px !important;line-height: 1.2;border-radius: 3px;}
+  .FCStepGrid .FCStepGridNumber, .FCBoxGridBuy .FCStepGridNumber{display:none !important;}
+}
+
+.FCStepGridTitle{
+  margin: 0 5px 0 0;
+}
+
+/* END - PAG PRODUTO */
 
 /* START - BANNER HOME */
 .base-banner-home{

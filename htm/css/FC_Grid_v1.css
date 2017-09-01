@@ -23,8 +23,8 @@
 .FCGridMain #idDivGridImg{min-height:350px;padding:0px;float:left;}
 .FCGridMain #idDivGridImg img{max-width:250px;max-height:250px;border:1px solid #cccccc;}
 @media only screen and (max-width:768px){
-  #idDivGridImg a.MagicThumb-swap{margin: 0px 2px 2px 0;top: -50px;position: relative;border:1px solid #fff;}
-  #idDivGridImg a.MagicThumb-swap img{width:40px;height:40px;}
+  /*#idDivGridImg a.MagicThumb-swap{margin: 0px 2px 2px 0;top: -60px;position: relative;border:1px solid #fff;}
+  #idDivGridImg a.MagicThumb-swap img{width:50px;height:46px;}*/
   #idDivGridImg p{display:none;}
   .FCProduct.ProductDet .detalhe-produto {margin-top:-50px;}
 }

@@ -154,7 +154,7 @@ function NoCascate(e) {
 
 function fnMaxInstallmentsGrid(e, t) {
     var o;
-    return 1e3 > e ? 100 > e ? 30 > e ? 1 > e || (t = 1) : t = 6 : t = 9 : t = 10, "undefined" != typeof Juros ? 0 == e || 1 == t || 0 == Juros.length ? "" : ((0 == t || t > Juros.length) && (t = Juros.length), o = Juros[t - 1] > 0 ? "" : " sem juros", "<br><span class=EstParc> ou <b>" + t + "x</b>" + o + " de <b class=EstParcPrice>" + FormatPrice(CalculaParcelaJurosCompostos(e, t), FC$.Currency) + "</b></span>") : ""
+    return 1e3 > e ? 100 > e ? 30 > e ? 1 > e || (t = 1) : t = 6 : t = 9 : t = 10, "undefined" != typeof Juros ? 0 == e || 1 == t || 0 == Juros.length ? "" : ((0 == t || t > Juros.length) && (t = Juros.length), o = Juros[t - 1] > 0 ? "" : "", "<span class=EstParc> ou <b>" + t + "x</b>" + o + " de <b class=EstParcPrice>" + FormatPrice(CalculaParcelaJurosCompostos(e, t), FC$.Currency) + "</b></span>") : ""
 }
 
 function FormatNumber(e) {
