@@ -174,16 +174,31 @@ var FCGrid$ = function () {
       {
         if(i===0)
         {
-          imgDetMini=novoArray[i];
-          imgAmpMini=novoArrayAmp[i];
-          sHtmlZoom+="<a href="+imgAmpMini+" title=\""+ fn.getNameProduct() +"\" class=MagicZoomPlus id=zoom2 rel=\"selectors-class:active; zoom-width:350px; zoom-height:350px; selectors-change:mouseover;\"><img src="+ imgDetMini +"></a><br>"
-                    +"<p><a class=\"FCGridBtnZoom\" onclick=\"MagicZoomPlus.expand(zoom2); return false;\" href=\"#\">Ampliar imagem</a></p>"
-                    +"<a href=\""+imgAmpMini+"\"  rel=\"zoom-id:zoom2;\" rev=\""+ imgDetMini +"\"><img src=\""+ imgDetMini +"\" width=65 height=65 class=ZoomIMG2></a>";
+          if(window.innerWidth >= 1024){
+            imgDetMini=novoArray[i];
+            imgAmpMini=novoArrayAmp[i];
+            sHtmlZoom+="<a href="+imgAmpMini+" title=\""+ fn.getNameProduct() +"\" class=MagicZoomPlus id=zoom2 rel=\"selectors-class:active; zoom-width:350px; zoom-height:350px; selectors-change:mouseover;\"><img src="+ imgDetMini +"></a>"
+                    //+"<p><a class=\"FCGridBtnZoom\" onclick=\"MagicZoomPlus.expand(zoom2); return false;\" href=\"#\">Ampliar imagem</a></p>"
+                    +"<a href=\""+imgAmpMini+"\"  rel=\"zoom-id:zoom2;\" rev=\""+ imgDetMini +"\"><img src=\""+ imgDetMini +"\" width=65 height=65 class=ZoomIMG2 ></a>";
+          } else{
+            imgDetMini=novoArray[i];
+            imgAmpMini=novoArrayAmp[i];
+            sHtmlZoom+="<a href="+imgAmpMini+" title=\""+ fn.getNameProduct() +"\" class=MagicZoomPlus id=zoom2 rel=\"selectors-class:active; zoom-width:350px; zoom-height:350px; selectors-change:mouseover;\"><img src="+ imgDetMini +"></a>"
+                    //+"<p><a class=\"FCGridBtnZoom\" onclick=\"MagicZoomPlus.expand(zoom2); return false;\" href=\"#\">Ampliar imagem</a></p>"
+                    +"<a href=\""+imgAmpMini+"\"  rel=\"zoom-id:zoom2;\" rev=\""+ imgDetMini +"\"><img src=\""+ imgDetMini +"\" width=50 height=46 class=ZoomIMG2 style=\"top: -54px;margin: 0px 2px 2px 0;position: relative;border:1px solid #fff\"></a>";
+          }
         }
         else{
-          imgDetMini=FC$.PathPrd+novoArray[i];
-          imgAmpMini=FC$.PathPrd+novoArrayAmp[i];
-          sHtmlZoom+="<a href="+imgAmpMini+" rel='zoom-id:zoom2;' rev="+ imgDetMini +"><img src="+ imgDetMini +" width=65 height=65 class=ZoomIMG2></a>";
+          
+          if(window.innerWidth >= 1024){
+            imgDetMini=FC$.PathPrd+novoArray[i];
+            imgAmpMini=FC$.PathPrd+novoArrayAmp[i];
+            sHtmlZoom+="<a href="+imgAmpMini+" rel='zoom-id:zoom2;' rev="+ imgDetMini +"><img src="+ imgDetMini +" width=65 height=65 class=ZoomIMG2></a>";
+          } else{
+            imgDetMini=FC$.PathPrd+novoArray[i];
+            imgAmpMini=FC$.PathPrd+novoArrayAmp[i];
+            sHtmlZoom+="<a href="+imgAmpMini+" rel='zoom-id:zoom2;' rev="+ imgDetMini +"><img src="+ imgDetMini +" width=50 height=46 class=ZoomIMG2 style=\"top: -54px;margin: 0px 2px 2px 0;position: relative;border:1px solid #fff\"></a>";
+          }
         }
       }
       document.getElementById(id).innerHTML=sHtmlZoom;
@@ -272,7 +287,7 @@ var FCGrid$ = function () {
       if(!product){
         oBtnComprar.setAttribute("class", "FCBtnGrid FCBtnSelectedOption FCBtnSelecioneGrid FCBtnSelecioneGridPosition");
         oBtnComprar.innerHTML="<img src=\""+ FC$.PathImg + options.btnSelectImg +"\">"
-                             +"<div class=\"FCTooltipGrid Off\" id=\"idTooltipGridFC\" style=\"display:\">Selecione primeiro as op??es do produto</div>";
+                             +"<div class=\"FCTooltipGrid Off\" id=\"idTooltipGridFC\" style=\"display:\">Selecione primeiro as opções do produto</div>";
         oBtnComprar.onclick=function(a){        
           if( fn.hasClass(document.getElementById("idTooltipGridFC"), "Off")){
             fn.removeClass(document.getElementById("idTooltipGridFC"), "Off");
@@ -306,7 +321,8 @@ var FCGrid$ = function () {
         else{
           oBtnComprar.setAttribute("class", "FCBtnGrid FCBtnComprarGrid");
           oBtnComprar.setAttribute("id", "cartBtnImg")
-          oBtnComprar.innerHTML="<img src=\""+ FC$.PathImg + options.btnBuyImg +"\" alt=\"Clique para adicionar ao carrinho\" class=\"btnPulse\">";
+          oBtnComprar.innerHTML="COMPRAR";
+          //oBtnComprar.innerHTML="<img src=\""+ FC$.PathImg + options.btnBuyImg +"\" alt=\"Clique para adicionar ao carrinho\" class=\"btnPulse\">";
           oBtnComprar.onclick=function(obj){
             fnBuyProdutct(this);
           };
