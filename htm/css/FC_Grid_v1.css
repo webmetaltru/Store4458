@@ -32,7 +32,7 @@
 .FCContentGrid{height:auto;position:relative;float:left;text-align:left !important;}
 .FCGridMain .FCDescritorGrid{min-width:30px;min-height:30px;display:block;text-align:center;border:1px solid #dddddd;padding:5px;margin:0;line-height:17px;}
 
-.FCBoxGrid{position:relative;width:100%;height:auto !important;display:table;text-align:left;border:0px solid #cccccc;font-size:13px;padding:5px;margin-bottom:5px;}
+.FCBoxGrid{position:relative;width:100%;height:auto !important;display:table;text-align:left;border:0px solid #cccccc;font-size:15px;padding:10px 0;margin-bottom:5px;}
 .FCDescritorGridDisabled .FCDescritorGrid{background:#dddddd;color:#686868;cursor:not-allowed;}
 .FCSelectedGrid{border-color:#5c60b4;background:#3e98e4;}
 .FCSelectedGrid span{background:#dddddd;}
@@ -63,7 +63,7 @@
 .FCBtnComprarGrid{}
 .FCBtnSelecioneGrid{}
 
-.FCDescritorContent{width:100%;height:auto;display:table;float:left;list-style:none;}
+.FCDescritorContent{width:100%;height:auto;display:table;float:left;list-style:none;margin: 0 0 10px 0;}
 .FCDescritorContent li{height:34px;position:relative;float:left;border:2px solid transparent;margin:2px;}
 .FCDescritorContent li:hover{}
 

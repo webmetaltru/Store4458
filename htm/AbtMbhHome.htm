@@ -1,0 +1,91 @@
+<script>
+  function MostraMaxParcela(PrecoProd,MaxParcelas){
+    var ComSem;
+    if(PrecoProd>=1000)MaxParcelas=10;
+      else if(PrecoProd>=100)MaxParcelas=9;
+      else if(PrecoProd>=30)MaxParcelas=6;
+      else if(PrecoProd>=1)MaxParcelas=1;
+
+    if(PrecoProd==0||MaxParcelas==1||Juros.length==0)return;
+    if(MaxParcelas==0||MaxParcelas>Juros.length)MaxParcelas=Juros.length;
+    if(Juros[MaxParcelas-1]>0)ComSem=""; else ComSem=" sem juros";
+    document.write(MaxParcelas+"x de <b>"+FormatPrecoReais(CalculaParcelaJurosCompostos(PrecoProd,MaxParcelas))+"</b> "+ ComSem);
+  }
+  
+</script>
+
+<div class="row">
+  <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12 no-p">
+    <div class="bnr-slick-slide">
+      <tag-HOME-BANNER-MOBILE-FULL>
+    </div>
+  </div>
+  <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12 no-p banner-promocional">
+     <banner 21>
+  </div>
+</div>
+
+<div class="row">
+  <div class="MainHomeBoxTitFC text-left">
+    <h2 class="titulo cozinha">TOP 10: Produtos que sua Casa precisa ter!</h2>
+  </div>
+  <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12">
+    <div class="bnr-slick-prod">
+      <tag-HOME-MOBILE-PRODUTOS-1>
+    </div>
+  </div>
+</div>
+
+<!-- START - PROMOCIONAIS 1 -->
+  <div class="row bnr-mini-mobile">
+	<div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p banner-promocional">
+		<banner 67>
+	</div>
+  </div>
+	<!-- END - PROMOCIONAIS 1 -->
+
+	<div class="row">
+  <div class="MainHomeBoxTitFC text-left">
+    <h2 class="titulo cozinha">Lavanderia Pequena? Confira Soluções Incríveis!</h2>
+  </div>
+  <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12">
+    <div class="bnr-slick-prod">
+      <tag-HOME-MOBILE-PRODUTOS-2>
+    </div>
+  </div>
+</div>
+
+
+<!-- START - PROMOCIONAIS 2 -->
+  <div class="row">
+        <div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p banner-promocional">
+		<banner 66>
+	</div>
+  </div>
+  <!-- END - PROMOCIONAIS 2 -->
+  
+  <div class="row">
+  <div class="MainHomeBoxTitFC text-left">
+    <h2 class="titulo cozinha">Sapateiras e Armários para Quarto Prático</h2>
+  </div>
+  <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12">
+    <div class="bnr-slick-prod">
+      <tag-HOME-MOBILE-PRODUTOS-2>
+    </div>
+  </div>
+</div>
+
+<!-- START - PROMOCIONAIS 3 -->
+  <div class="row">
+        <div class="col-small-12 col-medium-6 col-mlarge-6 col-xlarge-6 no-p banner-promocional">
+		<banner 55>
+	</div>
+  </div>
+  <!-- END - PROMOCIONAIS 3 -->
+  
+  <div class="row">
+  <div class="col-small-12 col-medium-12 col-large-12 col-mlarge-12 col-xlarge-12 no-p banner-promocional">
+     <banner 22>
+     <banner 23>
+  </div>
+  </div>
