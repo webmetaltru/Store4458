@@ -961,7 +961,7 @@ NProgress.done();
       try{SubTotalCart=(oCart[0].getElementsByTagName("subtotal")[0].childNodes[0].nodeValue);}catch(e){SubTotalCart="0"}
       var isSubTotalCart=SubTotalCart;
       var sTotalFree = isSubTotalCart.replace(",",".");
-      var priceFixed = 160;
+      var priceFixed = 179;
       var totalFree = parseFloat(priceFixed-sTotalFree);
       var totalReplaced = totalFree.toFixed(2);
       if(sTotalFree >= priceFixed){
@@ -1022,7 +1022,7 @@ FCLib$.onReady(function () {
     FCLib$.fnDontGo(userDontGo, {
       DontGoBtnClose: FC$.PathImg + "botdontgoclose.svg?cccfc=1", //Close button
       DontGoBanner: FC$.PathImg + "bannerpopupdontgo.jpg?cccfc=1", //Banner
-      DontGoLink: "/Custom.asp?IDLoja=4458&arq=promocao/mega-saldao&utm_source=mega-saldao&utm_medium=pop-up&utm_campaign=pop-up-saida&cupom=DESCONTOMEGA5", //Link
+      DontGoLink: "/Custom.asp?IDLoja=4458&arq=promocao/liquida-tudo-set17&utm_source=liquida-tudoset17&utm_medium=pop-up&utm_campaign=pop-up-saida&cupom=LIQUIDATUDO17", //Link
       DontGoAltParam: "UM DESCONTO ESPECIAL PARA VOCÊ!"
     }, //Alt Param
       "DontGoCookie"); //Cookie name
