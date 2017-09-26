@@ -12,7 +12,7 @@
       try{SubTotalCart=(oCart[0].getElementsByTagName("subtotal")[0].childNodes[0].nodeValue);}catch(e){SubTotalCart="0"}
       var isSubTotalCart=SubTotalCart;
       var sTotalFree = isSubTotalCart.replace(",",".");
-      var priceFixed = 160;
+      var priceFixed = 179;
       var totalFree = parseFloat(priceFixed-sTotalFree);
       var totalReplaced = totalFree.toFixed(2);
       if(sTotalFree >= priceFixed){
