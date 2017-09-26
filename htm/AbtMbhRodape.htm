@@ -23,9 +23,23 @@ if (FC$.Page == "Cart") {
     }
   }
   FCLib$.onReady(FB_AddToCart_ProductID);
+  
+  //jQuery("#FCCartBuyBut").css("position","fixed");
+  //jQuery("#FCCartBuyBut").css("bottom","5px");
+  //jQuery("#FCCartBuyBut").css("left","0");
+  //jQuery("#FCCartBuyBut").css("margin","0 2%");
+  //jQuery("#FCCartBuyBut").css("width","95%");
+  jQuery("#FCCartBuyBut").css("z-index","16000003");
 }
 </script>
 <!-- End Facebook Pixel Code -->
+
+<style>
+.FCCartBuy button{min-height: 60px;}
+.FCCartStillShopping button, .FCCartRecalculate button{min-height: 40px;}
+  #idCheckoutFC #idChkTopFC{height: 80px;}
+  .FCCheckout #idCheckoutFC #idTxtLinkContinueFC,#idCheckoutFC a:hover #idTxtLinkContinueFC{padding: 30px 60px;}
+</style>
 
 <!-- START - BING ADS -->
 <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5526273"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><noscript><img src="//bat.bing.com/action/0?ti=5526273&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" /></noscript>
@@ -157,7 +171,7 @@ if (FC$.Page == "Cart") {
           </li>
 		  <li>
             <a href="/noticias.asp?IDLoja=4458&v=1">
-              Aramado.com na Mídia
+              Dicas de Organização
             </a>
           </li>
           <li>
