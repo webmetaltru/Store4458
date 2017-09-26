@@ -266,7 +266,7 @@ table {display: table!important;border-collapse: separate!important;border-spaci
  
  #idChkAllFC {width:100%!important;}
  .FCCheckoutMain{width:100%;}
- .FCChkOrderConfirmationFloat{position: fixed;bottom: 40px;z-index: 1;} 
+ .FCChkOrderConfirmationFloat{position: fixed;bottom: 50px;z-index: 1;} 
 
  /* REGISTER */
  .FCRegisterChk{width:100%!important;}
