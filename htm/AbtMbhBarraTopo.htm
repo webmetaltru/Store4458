@@ -35,6 +35,7 @@ if(FC$.Page=="Checkout"){
    
    function btnshowbusca(){
 	jQuery('#CampoBusca').show();
+     jQuery('#btnShowBusca').hide();
    }
   
 </script>
@@ -44,7 +45,7 @@ if(FC$.Page=="Checkout"){
   </div>
   <img class="img-shipping" src='<PathTo file="images/icon_shipping.svg">'><br>
   <div id="zFTotalFreeFreight">
-    Faltam <b> R$ 160,00</b><br>
+    Faltam <b> R$ 179,00</b><br>
     para ganhar<br>
     <a href="#" data-toggle="modal" data-target="#ModalDetalheFreteGratis"><img src="<BASELOJA>images/frete-gratis.gif" border="0"></a>
 	p/ Sul e Sudeste.
@@ -76,7 +77,7 @@ if(FC$.Page=="Checkout"){
 <!-- FIM - Badge FRETE GRÁTIS -->
 
 <style>
-	.btn-busca-topo{margin:12px 0 0 5px;padding:0;width: 30px;position: absolute;}
+	.btn-busca-topo{margin:12px 0 0 10px;padding:0;width: 30px;position: absolute;}
 	.btn-busca-topo path{fill: #44ac55;}
 	
 	
@@ -143,9 +144,9 @@ li.menu-liquidacao a:hover h5{
 	</nav>
 	<div class="logo-mobile">
 		<tag-FCHeaderLogo>
-		<a class="btn-busca-topo" id="btnShowBusca" href="#search" onclick="btnshowbusca();">
+		<!--<a class="btn-busca-topo" id="btnShowBusca" href="#search" onclick="btnshowbusca();">
 			<img64 src="<BaseLoja>images/IconSearch.svg" plain="true" width="20" height="20" alt="Buscar" title="Buscar">
-		</a>
+		</a>-->
 	</div>
 	<div class="HeaderCartMainFC text-right">
 		<a href="/addProduto.asp?idloja=<IDLojaNum>">
@@ -160,7 +161,7 @@ li.menu-liquidacao a:hover h5{
     </a>
     <script>FCLib$.onReady(function(){sF$.fnUpdateCart(false,false);});</script>
 	</div>
-	<div id="CampoBusca" class="col-small-12 col-medium-12 no-p busca-topo" style="display:none;">
+	<div id="CampoBusca" class="col-small-12 col-medium-12 no-p busca-topo">
 		<form name="TopSearchForm" method="GET" id="autocomplete-form" action="/listaprodutos.asp">
 			<input type="hidden" name="idloja" value="<IDLojaNum>">
 			<input type="hidden" name="digitada" value="true">
